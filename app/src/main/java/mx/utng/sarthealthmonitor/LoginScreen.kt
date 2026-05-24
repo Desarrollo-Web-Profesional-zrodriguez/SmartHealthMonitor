@@ -2,13 +2,16 @@ package mx.utng.smarthealthmonitor
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
@@ -20,13 +23,13 @@ import mx.utng.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 @Composable
 fun LoginScreen(onLoginSuccess: () -> Unit = {}) {
 
-    // TODO 1: Declarar estado para email, password, isLoading
-    // Pista: var email by remember { mutableStateOf("") }
-    var email    by remember { mutableStateOf("") }
-    var password by remember { mutableStateOf("") }
-    var showPassword by remember { mutableStateOf(false) }
-    var isLoading by remember { mutableStateOf(false) }
-    var emailError by remember { mutableStateOf("") }
+    // TODO 1: Declarar estado persistente
+    var email    by rememberSaveable { mutableStateOf("") }
+    var password by rememberSaveable { mutableStateOf("") }
+    var showPassword by rememberSaveable { mutableStateOf(false) }
+    var isLoading by rememberSaveable { mutableStateOf(false) }
+    var emailError by rememberSaveable { mutableStateOf("") }
+    var passwordError by rememberSaveable { mutableStateOf("") }
 
     // Reto: Animación de escala para el botón
     val scale by animateFloatAsState(
@@ -34,15 +37,21 @@ fun LoginScreen(onLoginSuccess: () -> Unit = {}) {
         label = "ButtonScale"
     )
 
-    // TODO 2: Completar la función de validación
+    // TODO 2: Función de validación mejorada
     fun validar(): Boolean {
         emailError = when {
             email.isBlank() -> "El email no puede estar vacío"
-            !email.contains("@") -> "Email inválido"
+            !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() -> "Email inválido"
+            else -> ""
+        }
+        
+        passwordError = when {
+            password.isBlank() -> "La contraseña no puede estar vacía"
             password.length < 6 -> "Mínimo 6 caracteres"
             else -> ""
         }
-        return emailError.isEmpty()
+        
+        return emailError.isEmpty() && passwordError.isEmpty()
     }
 
     SmartHealthMonitorTheme {
@@ -51,7 +60,8 @@ fun LoginScreen(onLoginSuccess: () -> Unit = {}) {
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(paddingValues)
-                    .padding(horizontal = 24.dp),
+                    .padding(horizontal = 24.dp)
+                    .verticalScroll(rememberScrollState()),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
@@ -92,11 +102,16 @@ fun LoginScreen(onLoginSuccess: () -> Unit = {}) {
 
                 Spacer(Modifier.height(8.dp))
 
-                // TODO 5: Campo de contraseña con toggle visibilidad
+                // TODO 5: Campo de contraseña con toggle visibilidad y error
                 OutlinedTextField(
                     value = password,
-                    onValueChange = { password = it },
+                    onValueChange = { password = it; passwordError = "" },
                     label = { Text("Contraseña") },
+                    isError = passwordError.isNotEmpty(),
+                    supportingText = {
+                        if (passwordError.isNotEmpty())
+                            Text(passwordError, color = MaterialTheme.colorScheme.error)
+                    },
                     visualTransformation = if (showPassword)
                         VisualTransformation.None
                     else

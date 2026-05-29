@@ -13,7 +13,7 @@ Desarrollada como proyecto integrador en UTNG — 9° Cuatrimestre 2026.
 ## Pantallas implementadas
 - [x] LoginScreen — S4
 - [x] DashboardScreen — S5
-- [x] Historial completo — S6
+- [ ] Historial + wereable real — S6
 - [ ] Android TV — S10-S12
 
 ## Capturas de pantalla

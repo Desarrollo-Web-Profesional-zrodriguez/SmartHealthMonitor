@@ -17,8 +17,11 @@ Desarrollada como proyecto integrador en UTNG — 9° Cuatrimestre 2026.
 - [ ] Android TV — S10-S12
 
 ## Capturas de pantalla
-![Login](screenshots/login.png)
-![Dashboard](screenshots/dashboard.png)
+![img_1.png](img_1.png)
+
+--------
+
+![img.png](img.png)
  
 ## Autor
 Zahir Rodríguez — UTNG — zahir.rodriguez@utng.edu.mx

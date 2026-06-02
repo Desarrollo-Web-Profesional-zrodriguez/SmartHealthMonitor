@@ -1,4 +1,4 @@
-package mx.utng.sarthealthmonitor
+package mx.utng.samarrthealthmonitor
 
 import org.junit.Test
 

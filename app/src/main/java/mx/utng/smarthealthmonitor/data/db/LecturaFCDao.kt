@@ -15,6 +15,9 @@ interface LecturaFCDao {
         ORDER BY timestamp DESC
         LIMIT 50""")  // últimas 50 lecturas
     fun obtenerUltimas(): Flow<List<LecturaFC>>
+
+    @Query("DELETE FROM lecturas_fc WHERE timestamp < :umbral")
+    suspend fun limpiarViejos(umbral: Long)
 }
 
 

@@ -52,4 +52,11 @@ object SmartHealthRepository {
     // Flow del historial desde Room
     fun obtenerHistorial(): Flow<List<LecturaFC>> =
         dao?.obtenerUltimas() ?: emptyFlow()
+
+    suspend fun limpiarHistorialAntiguo() {
+        // 7 días en milisegundos: 7 * 24 * 60 * 60 * 1000
+        val sieteDiasMs = 7 * 24 * 60 * 60 * 1000L
+        val umbral = System.currentTimeMillis() - sieteDiasMs
+        dao?.limpiarViejos(umbral)
+    }
 }

@@ -3,8 +3,14 @@ package mx.utng.smarthealthmonitor.data.models
 import android.util.Log
 import com.google.android.gms.wearable.MessageEvent
 import com.google.android.gms.wearable.WearableListenerService
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
 class WearListenerService : WearableListenerService() {
+
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     companion object {
         const val PATH_FC    = "/smarthealthmonitor/fc"
@@ -16,6 +22,7 @@ class WearListenerService : WearableListenerService() {
     override fun onCreate() {
         super.onCreate()
         Log.d(TAG, "WearListenerService creado")
+        SmartHealthRepository.init(this)
     }
 
     override fun onMessageReceived(messageEvent: MessageEvent) {
@@ -27,7 +34,9 @@ class WearListenerService : WearableListenerService() {
             PATH_FC -> {
                 val bpm = data.toIntOrNull() ?: return
                 Log.d(TAG, "Actualizando FC en repositorio: $bpm")
-                SmartHealthRepository.actualizarFC(bpm)
+                scope.launch {
+                    SmartHealthRepository.actualizarFC(bpm)
+                }
             }
             PATH_PASOS -> {
                 val pasos = data.toIntOrNull() ?: return

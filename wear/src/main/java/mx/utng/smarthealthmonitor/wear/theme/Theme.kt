@@ -1,4 +1,4 @@
-package mx.utng.myapplication.presentation.theme
+package mx.utng.smarthealthmonitor.wear.theme
 
 import androidx.compose.runtime.Composable
 import androidx.wear.compose.material3.MaterialTheme

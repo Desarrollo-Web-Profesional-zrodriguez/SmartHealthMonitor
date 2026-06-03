@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Remove
-import mx.utng.myapplication.presentation.theme.SartHealthMonitorTheme
+import mx.utng.smarthealthmonitor.wear.theme.SartHealthMonitorTheme
 
 class WearMainActivity : ComponentActivity() {
     private val permissionLauncher = registerForActivityResult(

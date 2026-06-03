@@ -26,12 +26,14 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import kotlinx.coroutines.launch
 import mx.utng.smarthealthmonitor.BuildConfig
 import mx.utng.smarthealthmonitor.ui.viewmodel.DashboardViewModel
 import mx.utng.smarthealthmonitor.FilaHistorial
@@ -149,12 +151,15 @@ fun DashboardScreen(
                 }
                 item {
                     // Botón de simulación — SOLO PARA DEBUG
+                    val scope = rememberCoroutineScope()
                     if (BuildConfig.DEBUG) {
                         OutlinedButton (
                             onClick = {
                                 // Simular lectura del wearable
                                 val fcSimulado = (60..110).random()
-                                SmartHealthRepository.actualizarFC(fcSimulado)
+                                scope.launch {
+                                    SmartHealthRepository.actualizarFC(fcSimulado)
+                                }
                                 SmartHealthRepository.actualizarPasos((3000..8000).random())
                             },
                             modifier = Modifier.fillMaxWidth()

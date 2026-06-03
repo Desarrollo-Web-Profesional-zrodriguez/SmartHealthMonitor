@@ -92,14 +92,15 @@ fun DashboardScreen(
                 // ── Tarjeta FC ────────────────────────────
                 item {
                     val esNormal = fc in 60..100
+                    val colorAlerta = if (esNormal) Color(0xFF4CAF50) else MaterialTheme.colorScheme.error
                     TarjetaDato(
                         valor      = "$fc",
                         unidad     = "bpm",
                         label      = "Frecuencia cardíaca",
-                        colorValor = MaterialTheme.colorScheme.error,
+                        colorValor = colorAlerta,
                         icono      = Icons.Default.Favorite,
                         estado      = if (esNormal) "Normal" else "Consulta al médico",
-                        colorEstado = if (esNormal) Color(0xFF4CAF50) else MaterialTheme.colorScheme.error
+                        colorEstado = colorAlerta
                     )
                 }
                 

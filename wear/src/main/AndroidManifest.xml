@@ -38,7 +38,7 @@
         </service>
 
         <activity
-            android:name="mx.utng.myapplication.presentation.WearMainActivity"
+            android:name=".WearMainActivity"
             android:exported="true"
             android:taskAffinity=""
             android:theme="@style/MainActivityTheme.Starting">

@@ -18,15 +18,21 @@ class HealthDataService : PassiveListenerService() {
     }
 
     override fun onNewDataPointsReceived(dataPoints: DataPointContainer) {
-        android.util.Log.d("HealthDataService", "Nuevos puntos de datos recibidos")
+        // Procesar Frecuencia Cardíaca
         val fcDataPoints = dataPoints.getData(DataType.HEART_RATE_BPM)
-        android.util.Log.d("HealthDataService", "Puntos de FC: ${fcDataPoints.size}")
-
         fcDataPoints.forEach { dataPoint ->
             if (dataPoint is SampleDataPoint<Double>) {
                 val bpm = dataPoint.value.toInt()
-                android.util.Log.i("HealthDataService", "Enviando BPM: $bpm")
                 scope.launch { wearDataSender.enviarFC(bpm) }
+            }
+        }
+
+        // Procesar Pasos Diarios
+        val pasosDataPoints = dataPoints.getData(DataType.STEPS_DAILY)
+        pasosDataPoints.forEach { dataPoint ->
+            if (dataPoint is IntervalDataPoint<Long>) {
+                val pasos = dataPoint.value.toInt()
+                scope.launch { wearDataSender.enviarPasos(pasos) }
             }
         }
     }
@@ -42,7 +48,10 @@ class HealthDataService : PassiveListenerService() {
             val passiveClient = hsClient.passiveMonitoringClient
 
             val config = PassiveListenerConfig.builder()
-                .setDataTypes(setOf(DataType.HEART_RATE_BPM))
+                .setDataTypes(setOf(
+                    DataType.HEART_RATE_BPM,
+                    DataType.STEPS_DAILY
+                ))
                 .setShouldUserActivityInfoBeRequested(true)
                 .build()
 

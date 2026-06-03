@@ -37,20 +37,10 @@ fun LoginScreen(onLoginSuccess: () -> Unit = {}) {
         label = "ButtonScale"
     )
 
-    // TODO 2: Función de validación mejorada
+    // TODO 2: Función de validación simplificada para pruebas
     fun validar(): Boolean {
-        emailError = when {
-            email.isBlank() -> "El email no puede estar vacío"
-            !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() -> "Email inválido"
-            else -> ""
-        }
-        
-        passwordError = when {
-            password.isBlank() -> "La contraseña no puede estar vacía"
-            password.length < 6 -> "Mínimo 6 caracteres"
-            else -> ""
-        }
-        
+        emailError = if (email.isBlank()) "El email no puede estar vacío" else ""
+        passwordError = if (password.isBlank()) "La contraseña no puede estar vacía" else ""
         return emailError.isEmpty() && passwordError.isEmpty()
     }
 

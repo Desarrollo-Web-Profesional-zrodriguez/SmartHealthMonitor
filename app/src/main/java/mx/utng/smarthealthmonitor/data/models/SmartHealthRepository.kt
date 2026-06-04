@@ -53,10 +53,14 @@ object SmartHealthRepository {
     fun obtenerHistorial(): Flow<List<LecturaFC>> =
         dao?.obtenerUltimas() ?: emptyFlow()
 
-    suspend fun limpiarHistorialAntiguo() {
-        // 7 días en milisegundos: 7 * 24 * 60 * 60 * 1000
-        val sieteDiasMs = 7 * 24 * 60 * 60 * 1000L
-        val umbral = System.currentTimeMillis() - sieteDiasMs
+    suspend fun limpiarHistorialAntiguo(umbralManual: Long? = null) {
+        val umbral = if (umbralManual != null) {
+            umbralManual
+        } else {
+            // 7 días por defecto
+            val sieteDiasMs = 7 * 24 * 60 * 60 * 1000L
+            System.currentTimeMillis() - sieteDiasMs
+        }
         dao?.limpiarViejos(umbral)
     }
 }

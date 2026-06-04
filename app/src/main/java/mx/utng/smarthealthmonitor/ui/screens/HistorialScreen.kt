@@ -8,18 +8,19 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.DeleteSweep
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import kotlinx.coroutines.launch
 import mx.utng.smarthealthmonitor.FilaHistorial
 import mx.utng.smarthealthmonitor.data.db.LecturaFC
+import mx.utng.smarthealthmonitor.data.models.SmartHealthRepository
 import mx.utng.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 import mx.utng.smarthealthmonitor.ui.viewmodel.DashboardViewModel
 
@@ -30,9 +31,12 @@ fun HistorialScreen(
     viewModel: DashboardViewModel = viewModel()
 ) {
     val lecturas by viewModel.historial.collectAsState()
+    val scope = rememberCoroutineScope()
+    val snackbarHostState = remember { SnackbarHostState() }
 
     SmartHealthMonitorTheme {
         Scaffold(
+            snackbarHost = { SnackbarHost(snackbarHostState) },
             topBar = {
                 TopAppBar(
                     title = { Text("Historial de FC") },
@@ -48,6 +52,21 @@ fun HistorialScreen(
                         navigationIconContentColor = MaterialTheme.colorScheme.onPrimary
                     )
                 )
+            },
+            floatingActionButton = {
+                FloatingActionButton(
+                    onClick = {
+                        scope.launch {
+                            // Borrar lecturas de más de 24 horas
+                            val umbral24h = System.currentTimeMillis() - (24 * 60 * 60 * 1000L)
+                            SmartHealthRepository.limpiarHistorialAntiguo(umbral24h)
+                            snackbarHostState.showSnackbar("Historial limpiado")
+                        }
+                    },
+                    containerColor = MaterialTheme.colorScheme.secondaryContainer
+                ) {
+                    Icon(Icons.Default.DeleteSweep, contentDescription = "Limpiar historial antiguo")
+                }
             }
         ) { paddingValues ->
             if (lecturas.isEmpty()) {

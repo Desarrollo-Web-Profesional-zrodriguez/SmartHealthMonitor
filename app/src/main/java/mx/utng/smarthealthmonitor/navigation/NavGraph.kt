@@ -56,7 +56,7 @@ fun SmartHealthNavGraph() {
         }
         // ── Historial ──────────────────────────────────
         composable(Screen.Historial.route) {
-            HistorialScreen(
+            HistorialScreen(  // ← ya no es PantallaEnConstruccion
                 onBack = { navController.popBackStack() }
             )
         }

@@ -49,10 +49,10 @@ fun DashboardScreen(
     onAlertClick: () -> Unit = {},
     viewModel: DashboardViewModel = viewModel()
 ) {
-    val fc     by viewModel.fc.collectAsState()
-    val pasos  by viewModel.pasos.collectAsState()
-    val spO2   by viewModel.spO2.collectAsState()
-    val historial = viewModel.historial
+    val fc        by viewModel.fc.collectAsState()
+    val pasos     by viewModel.pasos.collectAsState()
+    val spO2      by viewModel.spO2.collectAsState()
+    val historial by viewModel.historial.collectAsState()
 
     SmartHealthMonitorTheme {
         Scaffold(

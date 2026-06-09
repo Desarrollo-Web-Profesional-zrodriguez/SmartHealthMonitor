@@ -20,19 +20,19 @@ class WearDataSender(private val context: Context) {
 
     private suspend fun enviarMensaje(path: String, data: String) {
         try {
-            // 1. Buscamos nodos que tengan la capacidad de recibir datos (recomendado)
+            // 1. Buscamos nodos que tengan la capacidad de recibir datos y estén ALCANCE (REACHABLE)
             val capabilityInfo = Wearable.getCapabilityClient(context)
-                .getCapability("health_monitor_receiver", CapabilityClient.FILTER_ALL)
+                .getCapability("health_monitor_receiver", CapabilityClient.FILTER_REACHABLE)
                 .await()
             
-            val targetNodes = capabilityInfo.nodes.toMutableSet()
-            Log.d("WearDataSender", "Nodos con capacidad encontrados: ${targetNodes.size}")
+            val targetNodes = capabilityInfo.nodes.filter { it.isNearby }.toMutableSet()
+            Log.d("WearDataSender", "Nodos cercanos con capacidad encontrados: ${targetNodes.size}")
             
-            // 2. Si no hay nodos con la capacidad, intentamos con todos los nodos conectados como respaldo
+            // 2. Si no hay nodos cercanos con la capacidad, intentamos con todos los nodos conectados como respaldo
             if (targetNodes.isEmpty()) {
-                Log.w("WearDataSender", "No se encontraron nodos con capacidad. Intentando con todos los nodos conectados...")
+                Log.w("WearDataSender", "No se encontraron nodos cercanos con capacidad. Intentando con todos los nodos conectados...")
                 val allNodes = Wearable.getNodeClient(context).connectedNodes.await()
-                targetNodes.addAll(allNodes)
+                targetNodes.addAll(allNodes.filter { it.isNearby })
             }
 
             if (targetNodes.isEmpty()) {

@@ -2,6 +2,7 @@ package mx.utng.smarthealthmonitor.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Warning
@@ -12,6 +13,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -29,9 +31,10 @@ import mx.utng.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 fun AlertaScreen(
     fc: Int,                       // FC actual del Dashboard
     onDismiss: () -> Unit,          // Cancelar / cerrar
-    onConfirmar: () -> Unit         // Confirmar y enviar alerta
+    onConfirmar: (String) -> Unit   // Confirmar y enviar alerta con nota
 ) {
     var enviando by remember { mutableStateOf(false) }
+    var nota by remember { mutableStateOf("") }
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -60,13 +63,19 @@ fun AlertaScreen(
                     text = "Se notificará a tus contactos de emergencia.\n" +
                             "Esta acción no se puede deshacer."
                 )
+                OutlinedTextField(
+                    value = nota,
+                    onValueChange = { nota = it },
+                    label = { Text("Nota opcional (ej. 'Me siento mareado')") },
+                    modifier = Modifier.fillMaxWidth()
+                )
             }
         },
         confirmButton = {
             Button(
                 onClick = {
                     enviando = true
-                    onConfirmar()
+                    onConfirmar(nota)
                 },
                 enabled = !enviando,
                 colors  = ButtonDefaults.buttonColors(
@@ -100,6 +109,6 @@ fun AlertaScreen(
 @Composable
 private fun AlertaScreenPreview() {
     SmartHealthMonitorTheme{
-        AlertaScreen(fc = 145, onDismiss = { }, onConfirmar = { })
+        AlertaScreen(fc = 145, onDismiss = { }, onConfirmar = { _ -> })
     }
 }

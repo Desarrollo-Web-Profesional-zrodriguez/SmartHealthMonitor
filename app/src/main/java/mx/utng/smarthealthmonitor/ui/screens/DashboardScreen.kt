@@ -33,6 +33,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import kotlinx.coroutines.launch
 import mx.utng.smarthealthmonitor.BuildConfig
 import mx.utng.smarthealthmonitor.ui.viewmodel.DashboardViewModel
@@ -46,7 +52,6 @@ import mx.utng.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 @Composable
 fun DashboardScreen(
     onHistorialClick: () -> Unit = {},
-    onAlertClick: () -> Unit = {},
     viewModel: DashboardViewModel = viewModel()
 ) {
     val fc        by viewModel.fc.collectAsState()
@@ -54,8 +59,37 @@ fun DashboardScreen(
     val spO2      by viewModel.spO2.collectAsState()
     val historial by viewModel.historial.collectAsState()
 
+    // ── Estado del diálogo y Snackbar ──────────────────────
+    var mostrarAlerta by remember { mutableStateOf(false) }
+    val snackbarHost  = remember { SnackbarHostState() }
+    val scope         = rememberCoroutineScope()
+
+    // ── Diálogo condicional ────────────────────────────────
+    if (mostrarAlerta) {
+        AlertaScreen(
+            fc          = fc,
+            onDismiss   = { mostrarAlerta = false },
+            onConfirmar = { nota ->
+                mostrarAlerta = false
+                scope.launch {
+                    val mensaje = if (nota.isBlank()) {
+                        "✅ Alerta enviada a tus contactos de emergencia"
+                    } else {
+                        "✅ Alerta enviada con nota: $nota"
+                    }
+                    snackbarHost.showSnackbar(
+                        message  = mensaje,
+                        duration = SnackbarDuration.Long
+                    )
+                }
+            }
+        )
+    }
+
     SmartHealthMonitorTheme {
         Scaffold(
+            // ── Snackbar host en el Scaffold ───────────────
+            snackbarHost = { SnackbarHost(hostState = snackbarHost) },
             topBar = {
                 TopAppBar(
                     title = {
@@ -73,24 +107,17 @@ fun DashboardScreen(
             },
             floatingActionButton = {
                 FloatingActionButton(
-                    onClick       = onAlertClick,
+                    onClick        = { mostrarAlerta = true },
                     containerColor = MaterialTheme.colorScheme.error
                 ) {
-                    Icon(
-                        imageVector       = Icons.Default.Warning,
+                    Icon(Icons.Default.Warning,
                         contentDescription = "Enviar alerta de emergencia",
-                        tint              = MaterialTheme.colorScheme.onError
-                    )
+                        tint = MaterialTheme.colorScheme.onError)
                 }
             }
         ) { paddingValues ->
-            LazyColumn(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(paddingValues),
-                contentPadding        = PaddingValues(16.dp),
-                verticalArrangement   = Arrangement.spacedBy(12.dp)
-            ) {
+            LazyColumn(Modifier.padding(paddingValues)) {
+
                 // ── Tarjeta FC ────────────────────────────
                 item {
                     val esNormal = fc in 60..100

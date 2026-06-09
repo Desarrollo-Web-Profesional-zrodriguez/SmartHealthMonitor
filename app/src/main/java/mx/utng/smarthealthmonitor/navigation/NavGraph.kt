@@ -48,9 +48,6 @@ fun SmartHealthNavGraph() {
             DashboardScreen(
                 onHistorialClick = {
                     navController.navigate(Screen.Historial.route)
-                },
-                onAlertClick = {
-                    navController.navigate(Screen.Alerta.route)
                 }
             )
         }

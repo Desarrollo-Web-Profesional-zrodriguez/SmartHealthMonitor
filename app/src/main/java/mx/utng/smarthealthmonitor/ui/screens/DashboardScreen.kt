@@ -36,6 +36,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -77,10 +78,17 @@ fun DashboardScreen(
                     } else {
                         "✅ Alerta enviada con nota: $nota"
                     }
-                    snackbarHost.showSnackbar(
-                        message  = mensaje,
-                        duration = SnackbarDuration.Long
+                    val result = snackbarHost.showSnackbar(
+                        message     = mensaje,
+                        actionLabel = "Deshacer",
+                        duration    = SnackbarDuration.Long
                     )
+                    if (result == SnackbarResult.ActionPerformed) {
+                        snackbarHost.showSnackbar(
+                            message = "❌ Alerta cancelada",
+                            duration = SnackbarDuration.Short
+                        )
+                    }
                 }
             }
         )

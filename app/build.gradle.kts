@@ -6,11 +6,12 @@ plugins {
 
 android {
     namespace = "mx.utng.smarthealthmonitor"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "mx.utng.smarthealthmonitor"
         minSdk = 26
+        //noinspection OldTargetApi
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -54,20 +55,22 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation("androidx.navigation:navigation-compose:2.8.0")
+    implementation(libs.androidx.navigation.compose)
     // Wearable Data Layer API
-    implementation("com.google.android.gms:play-services-wearable:18.2.0")
+    implementation(libs.play.services.wearable.v1820)
     // Coroutines para await()
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
+    implementation(libs.kotlinx.coroutines.play.services.v173)
     // Coroutines await() para Guava ListenableFuture
-    implementation("com.google.guava:guava:33.0.0-android")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.7.3")
+    implementation(libs.guava.v3300android)
+    implementation(libs.kotlinx.coroutines.guava.v173)
 
     // Room
     val roomVersion = "2.7.0-alpha11"
-    implementation("androidx.room:room-runtime:$roomVersion")
-    implementation("androidx.room:room-ktx:$roomVersion")
-    ksp("androidx.room:room-compiler:$roomVersion")
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+
+    implementation(project(":shared"))
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))

@@ -1,11 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.ksp)
 }
 
 android {
     namespace = "mx.utng.smarthealthmonitor.wear"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "mx.utng.smarthealthmonitor"
@@ -36,23 +37,33 @@ android {
 
 dependencies {
     // Health Services API
-    implementation("androidx.health:health-services-client:1.1.0-alpha03")
+    implementation(libs.androidx.health.services.client)
     // Coroutines await() para Guava ListenableFuture
-    implementation("com.google.guava:guava:33.0.0-android")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.7.3")
+    implementation(libs.guava)
+    implementation(libs.kotlinx.coroutines.guava)
     // Coroutines para Task de Play Services
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
+    implementation(libs.kotlinx.coroutines.play.services)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    // Compose for Wear OS
+    implementation(libs.androidx.wear.compose.material)
+    implementation(libs.androidx.wear.compose.foundation)
+    implementation(libs.androidx.wear.compose.navigation)
+    // Horologist (utilidades Wear OS de Google)
+    implementation(libs.horologist.compose.layout)
+    implementation(libs.horologist.compose.material)
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.wear.tooling.preview)
     implementation(libs.compose.material3)
-    implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material.icons.core)
     implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.compose.ui.tooling)

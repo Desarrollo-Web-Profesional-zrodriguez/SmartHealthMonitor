@@ -38,7 +38,7 @@
         </service>
 
         <activity
-            android:name=".WearMainActivity"
+            android:name=".presentation.WearMainActivity"
             android:exported="true"
             android:taskAffinity=""
             android:theme="@style/MainActivityTheme.Starting">

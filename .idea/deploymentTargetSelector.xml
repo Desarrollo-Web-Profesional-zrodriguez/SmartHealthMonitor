@@ -14,8 +14,8 @@
         <DialogSelection />
       </SelectionState>
       <SelectionState runConfigName="wear">
-        <option name="selectionMode" value="DIALOG" />
-        <DropdownSelection timestamp="2026-06-03T04:42:36.770406500Z">
+        <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2026-06-09T23:20:27.527375300Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\Lenovo\.android\avd\Wear_OS_XL_Round.avd" />

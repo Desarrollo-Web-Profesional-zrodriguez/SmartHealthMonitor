@@ -11,7 +11,7 @@ class WearMainActivity : ComponentActivity() {
         setContent {
             SmartHealthWearTheme {
                 // TODO Ej.02: reemplazar con WearNavGraph
-//                WearDashboardScreen()
+                WearDashboardScreen()
             }
         }
     }

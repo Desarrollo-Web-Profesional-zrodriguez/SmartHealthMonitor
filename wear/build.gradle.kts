@@ -55,6 +55,8 @@ dependencies {
     // Horologist (utilidades Wear OS de Google)
     implementation(libs.horologist.compose.layout)
     implementation(libs.horologist.compose.material)
+    // Compartir Repository y Data con el módulo shared (KMM)
+    implementation(project(":shared"))
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)

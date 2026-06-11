@@ -10,9 +10,14 @@ import mx.utng.smarthealthmonitor.data.models.SmartHealthRepository
 
 class WearDashboardViewModel : ViewModel() {
 
-    // Reutiliza el mismo Repository del módulo app
+    // Reutiliza el mismo Repository del módulo shared
     val fc: StateFlow<Int> = SmartHealthRepository.fcFlow
         .map { if (it == 0) 72 else it }  // valor por defecto
         .stateIn(viewModelScope,
             SharingStarted.WhileSubscribed(5_000), 72)
+
+    // Flow de pasos para la UI
+    val pasos: StateFlow<Int> = SmartHealthRepository.pasosFlow
+        .stateIn(viewModelScope,
+            SharingStarted.WhileSubscribed(5_000), 0)
 }

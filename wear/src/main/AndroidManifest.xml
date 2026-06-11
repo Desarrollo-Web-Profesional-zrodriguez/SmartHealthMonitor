@@ -3,6 +3,7 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.BODY_SENSORS_BACKGROUND" />
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 
     <uses-feature android:name="android.hardware.type.watch" />
@@ -20,22 +21,13 @@
             android:name="wear-sdk"
             android:required="false" />
 
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
 
         <service
             android:name="mx.utng.smarthealthmonitor.wear.HealthDataService"
-            android:exported="true"
-            android:permission="com.google.android.gms.permission.BIND_HEALTH_SERVICES">
-            <intent-filter>
-                <action android:name="androidx.health.services.PassiveListenerService" />
-            </intent-filter>
-        </service>
+            android:exported="false" />
 
         <activity
             android:name=".presentation.WearMainActivity"

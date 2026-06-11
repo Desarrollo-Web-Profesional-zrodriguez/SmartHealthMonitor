@@ -2,15 +2,20 @@ package mx.utng.smarthealthmonitor.wear.presentation
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.foundation.lazy.ScalingLazyColumn
 import androidx.wear.compose.foundation.lazy.rememberScalingLazyListState
 import androidx.wear.compose.material.Chip
 import androidx.wear.compose.material.ChipDefaults
+import androidx.wear.compose.material.CompactChip
+import androidx.wear.compose.material.ListHeader
 import androidx.wear.compose.material.MaterialTheme
 import androidx.wear.compose.material.PositionIndicator
 import androidx.wear.compose.material.Scaffold
@@ -25,11 +30,11 @@ fun WearDashboardScreen(
     viewModel: WearDashboardViewModel = viewModel()
 ) {
     val fc by viewModel.fc.collectAsState()
+    val pasos by viewModel.pasos.collectAsState()
     val listState = rememberScalingLazyListState()
 
     Scaffold(
         timeText = {
-            // La hora desaparece al hacer scroll
             TimeText(modifier = Modifier.scrollAway(listState))
         },
         positionIndicator = {
@@ -40,17 +45,45 @@ fun WearDashboardScreen(
             state    = listState,
             modifier = Modifier.fillMaxSize()
         ) {
-            // Item 1: Card de FC
+            item {
+                ListHeader {
+                    Text(
+                        text = "Smart Health",
+                        textAlign = TextAlign.Center,
+                        style = MaterialTheme.typography.caption1,
+                        color = MaterialTheme.colors.secondary
+                    )
+                }
+            }
+
+            // Item 1: Card de Frecuencia Cardíaca
             item {
                 WearFCCard(
                     fc = fc,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)
                 )
             }
-            // Item 2: Chip de Alerta
+
+            // Item 2: CompactChip de Pasos
+            item {
+                val pasosTexto = if (pasos == 0) "-- pasos" else "$pasos pasos"
+                CompactChip(
+                    label = {
+                        Text(
+                            text = pasosTexto,
+                            modifier = Modifier.fillMaxWidth(),
+                            textAlign = TextAlign.Center
+                        )
+                    },
+                    onClick = { },
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 4.dp)
+                )
+            }
+
+            // Item 3: Botón de Alerta
             item {
                 Chip(
-                    label  = { Text("⚠ Alerta") },
+                    label  = { Text("⚠ Alerta Médica") },
                     onClick = onAlertClick,
                     colors = ChipDefaults.primaryChipColors(
                         backgroundColor = MaterialTheme.colors.error

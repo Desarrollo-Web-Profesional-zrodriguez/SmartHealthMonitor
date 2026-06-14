@@ -31,10 +31,8 @@ public class SmartHealthDB_Impl : SmartHealthDB() {
     LecturaFCDao_Impl(this)
   }
 
-
   protected override fun createOpenDelegate(): RoomOpenDelegate {
-    val _openDelegate: RoomOpenDelegate = object : RoomOpenDelegate(1,
-        "769981bf94b6b2101c19808596c249c2", "8a25280a8a8fdda8ad70f11733c41889") {
+    val _openDelegate: RoomOpenDelegate = object : RoomOpenDelegate(1, "769981bf94b6b2101c19808596c249c2", "8a25280a8a8fdda8ad70f11733c41889") {
       public override fun createAllTables(connection: SQLiteConnection) {
         connection.execSQL("CREATE TABLE IF NOT EXISTS `lecturas_fc` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `valorBpm` INTEGER NOT NULL, `timestamp` INTEGER NOT NULL, `hora` TEXT NOT NULL, `esNormal` INTEGER NOT NULL)")
         connection.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)")
@@ -59,23 +57,16 @@ public class SmartHealthDB_Impl : SmartHealthDB() {
       public override fun onPostMigrate(connection: SQLiteConnection) {
       }
 
-      public override fun onValidateSchema(connection: SQLiteConnection):
-          RoomOpenDelegate.ValidationResult {
+      public override fun onValidateSchema(connection: SQLiteConnection): RoomOpenDelegate.ValidationResult {
         val _columnsLecturasFc: MutableMap<String, TableInfo.Column> = mutableMapOf()
-        _columnsLecturasFc.put("id", TableInfo.Column("id", "INTEGER", true, 1, null,
-            TableInfo.CREATED_FROM_ENTITY))
-        _columnsLecturasFc.put("valorBpm", TableInfo.Column("valorBpm", "INTEGER", true, 0, null,
-            TableInfo.CREATED_FROM_ENTITY))
-        _columnsLecturasFc.put("timestamp", TableInfo.Column("timestamp", "INTEGER", true, 0, null,
-            TableInfo.CREATED_FROM_ENTITY))
-        _columnsLecturasFc.put("hora", TableInfo.Column("hora", "TEXT", true, 0, null,
-            TableInfo.CREATED_FROM_ENTITY))
-        _columnsLecturasFc.put("esNormal", TableInfo.Column("esNormal", "INTEGER", true, 0, null,
-            TableInfo.CREATED_FROM_ENTITY))
+        _columnsLecturasFc.put("id", TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY))
+        _columnsLecturasFc.put("valorBpm", TableInfo.Column("valorBpm", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY))
+        _columnsLecturasFc.put("timestamp", TableInfo.Column("timestamp", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY))
+        _columnsLecturasFc.put("hora", TableInfo.Column("hora", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY))
+        _columnsLecturasFc.put("esNormal", TableInfo.Column("esNormal", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY))
         val _foreignKeysLecturasFc: MutableSet<TableInfo.ForeignKey> = mutableSetOf()
         val _indicesLecturasFc: MutableSet<TableInfo.Index> = mutableSetOf()
-        val _infoLecturasFc: TableInfo = TableInfo("lecturas_fc", _columnsLecturasFc,
-            _foreignKeysLecturasFc, _indicesLecturasFc)
+        val _infoLecturasFc: TableInfo = TableInfo("lecturas_fc", _columnsLecturasFc, _foreignKeysLecturasFc, _indicesLecturasFc)
         val _existingLecturasFc: TableInfo = read(connection, "lecturas_fc")
         if (!_infoLecturasFc.equals(_existingLecturasFc)) {
           return RoomOpenDelegate.ValidationResult(false, """
@@ -113,9 +104,7 @@ public class SmartHealthDB_Impl : SmartHealthDB() {
     return _autoMigrationSpecsSet
   }
 
-  public override
-      fun createAutoMigrations(autoMigrationSpecs: Map<KClass<out AutoMigrationSpec>, AutoMigrationSpec>):
-      List<Migration> {
+  public override fun createAutoMigrations(autoMigrationSpecs: Map<KClass<out AutoMigrationSpec>, AutoMigrationSpec>): List<Migration> {
     val _autoMigrations: MutableList<Migration> = mutableListOf()
     return _autoMigrations
   }

@@ -6,10 +6,10 @@ plugins {
 
 android {
     namespace = "mx.utng.smarthealthmonitor.wear"
-    compileSdk = 37
+    compileSdk = 37                          // ← corregido
 
     defaultConfig {
-        applicationId = "mx.utng.smarthealthmonitor"
+        applicationId = "mx.utng.smarthealthmonitor.wear"  // ← corregido
         minSdk = 30
         targetSdk = 35
         versionCode = 1
@@ -43,7 +43,10 @@ dependencies {
     implementation(libs.kotlinx.coroutines.guava)
     // Coroutines para Task de Play Services
     implementation(libs.kotlinx.coroutines.play.services)
-
+    // Jetpack WatchFace API
+    implementation(libs.androidx.watchface)
+    implementation(libs.androidx.watchface.complications.rendering)
+    implementation(libs.androidx.watchface.style)
     // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)

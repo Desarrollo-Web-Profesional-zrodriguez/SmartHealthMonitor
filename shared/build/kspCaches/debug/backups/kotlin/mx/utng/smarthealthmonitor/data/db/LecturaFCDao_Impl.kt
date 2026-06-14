@@ -30,8 +30,7 @@ public class LecturaFCDao_Impl(
   init {
     this.__db = __db
     this.__insertAdapterOfLecturaFC = object : EntityInsertAdapter<LecturaFC>() {
-      protected override fun createQuery(): String =
-          "INSERT OR REPLACE INTO `lecturas_fc` (`id`,`valorBpm`,`timestamp`,`hora`,`esNormal`) VALUES (nullif(?, 0),?,?,?,?)"
+      protected override fun createQuery(): String = "INSERT OR REPLACE INTO `lecturas_fc` (`id`,`valorBpm`,`timestamp`,`hora`,`esNormal`) VALUES (nullif(?, 0),?,?,?,?)"
 
       protected override fun bind(statement: SQLiteStatement, entity: LecturaFC) {
         statement.bindLong(1, entity.id.toLong())
@@ -44,8 +43,7 @@ public class LecturaFCDao_Impl(
     }
   }
 
-  public override suspend fun insertar(lectura: LecturaFC): Unit = performSuspending(__db, false,
-      true) { _connection ->
+  public override suspend fun insertar(lectura: LecturaFC): Unit = performSuspending(__db, false, true) { _connection ->
     __insertAdapterOfLecturaFC.insert(_connection, lectura)
   }
 
@@ -59,25 +57,25 @@ public class LecturaFCDao_Impl(
     return createFlow(__db, false, arrayOf("lecturas_fc")) { _connection ->
       val _stmt: SQLiteStatement = _connection.prepare(_sql)
       try {
-        val _cursorIndexOfId: Int = getColumnIndexOrThrow(_stmt, "id")
-        val _cursorIndexOfValorBpm: Int = getColumnIndexOrThrow(_stmt, "valorBpm")
-        val _cursorIndexOfTimestamp: Int = getColumnIndexOrThrow(_stmt, "timestamp")
-        val _cursorIndexOfHora: Int = getColumnIndexOrThrow(_stmt, "hora")
-        val _cursorIndexOfEsNormal: Int = getColumnIndexOrThrow(_stmt, "esNormal")
+        val _columnIndexOfId: Int = getColumnIndexOrThrow(_stmt, "id")
+        val _columnIndexOfValorBpm: Int = getColumnIndexOrThrow(_stmt, "valorBpm")
+        val _columnIndexOfTimestamp: Int = getColumnIndexOrThrow(_stmt, "timestamp")
+        val _columnIndexOfHora: Int = getColumnIndexOrThrow(_stmt, "hora")
+        val _columnIndexOfEsNormal: Int = getColumnIndexOrThrow(_stmt, "esNormal")
         val _result: MutableList<LecturaFC> = mutableListOf()
         while (_stmt.step()) {
           val _item: LecturaFC
           val _tmpId: Int
-          _tmpId = _stmt.getLong(_cursorIndexOfId).toInt()
+          _tmpId = _stmt.getLong(_columnIndexOfId).toInt()
           val _tmpValorBpm: Int
-          _tmpValorBpm = _stmt.getLong(_cursorIndexOfValorBpm).toInt()
+          _tmpValorBpm = _stmt.getLong(_columnIndexOfValorBpm).toInt()
           val _tmpTimestamp: Long
-          _tmpTimestamp = _stmt.getLong(_cursorIndexOfTimestamp)
+          _tmpTimestamp = _stmt.getLong(_columnIndexOfTimestamp)
           val _tmpHora: String
-          _tmpHora = _stmt.getText(_cursorIndexOfHora)
+          _tmpHora = _stmt.getText(_columnIndexOfHora)
           val _tmpEsNormal: Boolean
           val _tmp: Int
-          _tmp = _stmt.getLong(_cursorIndexOfEsNormal).toInt()
+          _tmp = _stmt.getLong(_columnIndexOfEsNormal).toInt()
           _tmpEsNormal = _tmp != 0
           _item = LecturaFC(_tmpId,_tmpValorBpm,_tmpTimestamp,_tmpHora,_tmpEsNormal)
           _result.add(_item)

@@ -44,6 +44,7 @@ fun WearHistorialScreen(
     ) {
         ScalingLazyColumn(
             state    = listState,
+            flingBehavior = ScalingLazyColumnDefaults.snapFlingBehavior(state = listState),
             modifier = Modifier
                 .fillMaxSize()
                 .rotaryScrollable(  // ← conecta la corona

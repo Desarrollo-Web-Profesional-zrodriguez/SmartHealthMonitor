@@ -44,23 +44,39 @@ class HealthDataService : PassiveListenerService() {
             }
         }
 
-        // 2. Procesar Pasos Diarios
+        // 2. Procesar Pasos Diarios (Acumulados)
         val pasosDataPoints = dataPoints.getData(DataType.STEPS_DAILY)
         if (pasosDataPoints.isNotEmpty()) {
             val ultimoDato = pasosDataPoints.last()
             if (ultimoDato is IntervalDataPoint<Long>) {
                 val pasos = ultimoDato.value.toInt()
-                Log.d("HealthDataService", "Pasos recibidos: $pasos. Enviando con AppScope...")
-                
-                scope.launch {
-                    try {
-                        wearDataSender.enviarPasos(pasos)
-                        SmartHealthRepository.actualizarPasos(pasos)
-                        Log.d("HealthDataService", "Pasos enviados y guardados exitosamente")
-                    } catch (e: Exception) {
-                        Log.e("HealthDataService", "Error en proceso de Pasos", e)
-                    }
+                Log.d("HealthDataService", "Pasos acumulados hoy: $pasos")
+                if (pasos > 0) {
+                    actualizarPasosEnRepo(pasos, scope, wearDataSender)
                 }
+            }
+        }
+
+        // 3. Procesar Pasos Instantáneos (Deltas) - Útil para el emulador
+        val pasosDeltaPoints = dataPoints.getData(DataType.STEPS)
+        if (pasosDeltaPoints.isNotEmpty()) {
+            val delta = pasosDeltaPoints.sumOf { (it as? IntervalDataPoint<Long>)?.value ?: 0L }.toInt()
+            if (delta > 0) {
+                val pasosActuales = SmartHealthRepository.pasosFlow.value
+                val nuevosPasos = pasosActuales + delta
+                Log.d("HealthDataService", "Delta de pasos: $delta. Total calculado: $nuevosPasos")
+                actualizarPasosEnRepo(nuevosPasos, scope, wearDataSender)
+            }
+        }
+    }
+
+    private fun actualizarPasosEnRepo(pasos: Int, scope: CoroutineScope, wearDataSender: WearDataSender) {
+        scope.launch {
+            try {
+                wearDataSender.enviarPasos(pasos)
+                SmartHealthRepository.actualizarPasos(pasos)
+            } catch (e: Exception) {
+                Log.e("HealthDataService", "Error enviando pasos", e)
             }
         }
     }
@@ -78,7 +94,8 @@ class HealthDataService : PassiveListenerService() {
             val config = PassiveListenerConfig.builder()
                 .setDataTypes(setOf(
                     DataType.HEART_RATE_BPM,
-                    DataType.STEPS_DAILY
+                    DataType.STEPS_DAILY,
+                    DataType.STEPS // Añadimos pasos instantáneos como respaldo
                 ))
                 .setShouldUserActivityInfoBeRequested(true)
                 .build()

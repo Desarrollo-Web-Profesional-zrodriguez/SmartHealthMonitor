@@ -52,6 +52,23 @@
   </table>
 </div>
 
+## Unidad II — Wear OS
+| Pantalla | Descripción |
+|---|---|
+| WearDashboardScreen | FC en tiempo real con ScalingLazyColumn y TimeText |
+| WearHistorialScreen | Lista con Rotary Input (corona del reloj) |
+| WearAlertaScreen    | Botones circulares de confirmación |
+| SmartHealth WatchFace | Hora + FC en el WatchFace nativo |
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><b>WatchFace</b><br/><img src="screenshots/watchface.png" width="200" alt="Login Screen"/></td>
+      <td align="center"><b>Wear Dashboard</b><br/><img src="screenshots/wear_dashboard.png" width="200" alt="Dashboard Screen"/></td>
+    </tr>
+  </table>
+</div>
+
 ---
 
 ## 👤 Autor

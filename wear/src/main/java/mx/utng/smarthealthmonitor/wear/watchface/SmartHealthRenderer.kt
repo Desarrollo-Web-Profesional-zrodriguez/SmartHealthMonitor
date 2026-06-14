@@ -43,6 +43,11 @@ class SmartHealthRenderer(
         textSize  = 30f
         isAntiAlias = true
     }
+    private val paintPasos = Paint().apply {
+        color     = Color.CYAN
+        textSize  = 26f
+        isAntiAlias = true
+    }
     private val paintSub = Paint().apply {
         color     = Color.GRAY
         textSize  = 22f
@@ -80,6 +85,8 @@ class SmartHealthRenderer(
 
         // Elementos extras solo si NO estamos en Ambient Mode
         if (!isAmbient) {
+            paintPasos.isAntiAlias = true
+            
             // Segundos (pequeño debajo)
             val seg = String.format(Locale.getDefault(), "%02d", zonedDateTime.second)
             canvas.drawText(seg, cx - 18f, cy + 30f, paintSub)
@@ -95,6 +102,16 @@ class SmartHealthRenderer(
                 val fcW = paintFC.measureText(fcStr)
                 canvas.drawText(fcStr, cx - fcW/2, cy + 70f, paintFC)
             }
+
+            // Pasos desde SmartHealthRepository
+            val pasos = try {
+                SmartHealthRepository.pasosFlow.value
+            } catch (e: Exception) {
+                0
+            }
+            val pasosStr = "👣 $pasos"
+            val pasosW = paintPasos.measureText(pasosStr)
+            canvas.drawText(pasosStr, cx - pasosW/2, cy + 105f, paintPasos)
         }
     }
 

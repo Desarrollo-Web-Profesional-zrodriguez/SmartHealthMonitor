@@ -29,6 +29,7 @@ class WearMainActivity : ComponentActivity() {
         // Pedir permisos en tiempo de ejecución
         permissionLauncher.launch(arrayOf(
             android.Manifest.permission.BODY_SENSORS,
+            android.Manifest.permission.BODY_SENSORS_BACKGROUND,
             android.Manifest.permission.ACTIVITY_RECOGNITION
         ))
 

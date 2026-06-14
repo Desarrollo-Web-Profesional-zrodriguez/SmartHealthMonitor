@@ -32,13 +32,24 @@ object SmartHealthRepository {
     private var dao: LecturaFCDao? = null
 
     fun init(context: Context) {
-        dao = SmartHealthDB.getDatabase(context).lecturaDao()
+        if (dao == null) {
+            android.util.Log.d("SmartHealthRepository", "Initializing DB")
+            dao = SmartHealthDB.getDatabase(context).lecturaDao()
+        }
     }
 
     suspend fun actualizarFC(bpm: Int) {
+        android.util.Log.d("SmartHealthRepository", "actualizarFC: $bpm")
         _fcFlow.value = bpm
         // Persistir en Room automáticamente
-        dao?.insertar(LecturaFC(valorBpm = bpm))
+        try {
+            dao?.let {
+                it.insertar(LecturaFC(valorBpm = bpm))
+                android.util.Log.d("SmartHealthRepository", "FC guardada en BD")
+            } ?: android.util.Log.w("SmartHealthRepository", "DAO es nulo, no se pudo guardar FC")
+        } catch (e: Exception) {
+            android.util.Log.e("SmartHealthRepository", "Error al guardar FC en BD", e)
+        }
     }
 
     fun actualizarPasos(pasos: Int) {

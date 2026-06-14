@@ -1,67 +1,92 @@
 package mx.utng.smarthealthmonitor.wear
 
-import android.app.Service
 import android.content.Context
-import android.content.Intent
-import android.hardware.Sensor
-import android.hardware.SensorEvent
-import android.hardware.SensorEventListener
-import android.hardware.SensorManager
-import android.os.IBinder
 import android.util.Log
+import androidx.health.services.client.HealthServices
+import androidx.health.services.client.PassiveListenerService
+import androidx.health.services.client.data.*
 import kotlinx.coroutines.*
+import kotlinx.coroutines.guava.await
 import mx.utng.smarthealthmonitor.data.models.SmartHealthRepository
 
-class HealthDataService : Service(), SensorEventListener {
+class HealthDataService : PassiveListenerService() {
 
-    private val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
-    private lateinit var sensorManager: SensorManager
-    private var heartRateSensor: Sensor? = null
-    private lateinit var wearDataSender: WearDataSender
+    private var ultimoBpm = 0
 
-    override fun onCreate() {
-        super.onCreate()
-        wearDataSender = WearDataSender(this)
-        sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        heartRateSensor = sensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE)
+    override fun onNewDataPointsReceived(dataPoints: DataPointContainer) {
+        val app = application as SmartHealthWearApp
+        val scope = app.applicationScope
+        val wearDataSender = app.wearDataSender
 
-        if (heartRateSensor != null) {
-            sensorManager.registerListener(this, heartRateSensor, SensorManager.SENSOR_DELAY_NORMAL)
-            Log.d("HealthDataService", "Sensor de FC registrado correctamente")
-        } else {
-            Log.e("HealthDataService", "El dispositivo no tiene sensor de frecuencia cardíaca")
+        Log.d("HealthDataService", "onNewDataPointsReceived")
+        
+        // 1. Procesar Frecuencia Cardíaca
+        val fcDataPoints = dataPoints.getData(DataType.HEART_RATE_BPM)
+        if (fcDataPoints.isNotEmpty()) {
+            val ultimoDataPoint = fcDataPoints.last()
+            if (ultimoDataPoint is SampleDataPoint<Double>) {
+                val bpm = ultimoDataPoint.value.toInt()
+                
+                if (bpm != ultimoBpm && bpm > 0) {
+                    ultimoBpm = bpm
+                    Log.d("HealthDataService", "BPM recibido: $bpm. Enviando con AppScope...")
+                    
+                    scope.launch {
+                        try {
+                            wearDataSender.enviarFC(bpm)
+                            SmartHealthRepository.actualizarFC(bpm)
+                            Log.d("HealthDataService", "FC enviada y guardada exitosamente")
+                        } catch (e: Exception) {
+                            Log.e("HealthDataService", "Error en proceso de FC", e)
+                        }
+                    }
+                }
+            }
         }
-    }
 
-    override fun onSensorChanged(event: SensorEvent) {
-        if (event.sensor.type == Sensor.TYPE_HEART_RATE) {
-            val bpm = event.values[0].toInt()
-            if (bpm > 0) {
-                Log.d("HealthDataService", "Nueva lectura de FC: $bpm")
-                // 1. Enviar al teléfono
-                scope.launch { wearDataSender.enviarFC(bpm) }
-                // 2. Actualizar la UI del reloj
+        // 2. Procesar Pasos Diarios
+        val pasosDataPoints = dataPoints.getData(DataType.STEPS_DAILY)
+        if (pasosDataPoints.isNotEmpty()) {
+            val ultimoDato = pasosDataPoints.last()
+            if (ultimoDato is IntervalDataPoint<Long>) {
+                val pasos = ultimoDato.value.toInt()
+                Log.d("HealthDataService", "Pasos recibidos: $pasos. Enviando con AppScope...")
+                
                 scope.launch {
-                    SmartHealthRepository.actualizarFC(bpm)
+                    try {
+                        wearDataSender.enviarPasos(pasos)
+                        SmartHealthRepository.actualizarPasos(pasos)
+                        Log.d("HealthDataService", "Pasos enviados y guardados exitosamente")
+                    } catch (e: Exception) {
+                        Log.e("HealthDataService", "Error en proceso de Pasos", e)
+                    }
                 }
             }
         }
     }
 
-    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}
-
-    override fun onBind(intent: Intent?): IBinder? = null
-
     override fun onDestroy() {
+        Log.d("HealthDataService", "Service onDestroy (la tarea seguirá en AppScope)")
         super.onDestroy()
-        sensorManager.unregisterListener(this)
-        scope.cancel()
     }
 
     companion object {
-        fun iniciar(context: Context) {
-            val intent = Intent(context, HealthDataService::class.java)
-            context.startService(intent)
+        suspend fun registrar(context: Context) {
+            val hsClient = HealthServices.getClient(context)
+            val passiveClient = hsClient.passiveMonitoringClient
+
+            val config = PassiveListenerConfig.builder()
+                .setDataTypes(setOf(
+                    DataType.HEART_RATE_BPM,
+                    DataType.STEPS_DAILY
+                ))
+                .setShouldUserActivityInfoBeRequested(true)
+                .build()
+
+            passiveClient.setPassiveListenerServiceAsync(
+                HealthDataService::class.java,
+                config
+            ).await()
         }
     }
 }

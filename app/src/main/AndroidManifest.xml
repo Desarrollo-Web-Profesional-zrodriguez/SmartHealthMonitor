@@ -36,6 +36,10 @@
                     android:pathPrefix="/smarthealthmonitor" />
             </intent-filter>
         </service>
+
+        <meta-data
+            android:name="com.google.android.gms.wearable.capabilities"
+            android:resource="@xml/wearable_app_desc" />
     </application>
 
 </manifest>

@@ -1,0 +1,1 @@
+adb shell am broadcast -a "whs.synthetic.user.START_WALKING" com.google.android.wearable.healthservices

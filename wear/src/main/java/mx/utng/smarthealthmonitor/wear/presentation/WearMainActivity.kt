@@ -5,6 +5,8 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 import mx.utng.smarthealthmonitor.wear.HealthDataService
 import mx.utng.smarthealthmonitor.wear.presentation.theme.SmartHealthWearTheme
 
@@ -38,7 +40,13 @@ class WearMainActivity : ComponentActivity() {
     }
 
     private fun registrarServicioSalud() {
-        // Usamos el nuevo método de inicio para el sensor clásico
-        HealthDataService.iniciar(this)
+        lifecycleScope.launch {
+            try {
+                HealthDataService.registrar(this@WearMainActivity)
+                Log.d("WearMainActivity", "Servicio registrado en Health Services")
+            } catch (e: Exception) {
+                Log.e("WearMainActivity", "Error al registrar servicio", e)
+            }
+        }
     }
 }

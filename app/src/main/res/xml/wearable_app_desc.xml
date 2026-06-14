@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wearableApp package="mx.utng.smarthealthmonitor">
+    <capability name="health_monitor_receiver" />
+</wearableApp>

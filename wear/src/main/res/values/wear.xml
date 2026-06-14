@@ -2,5 +2,6 @@
 <resources>
     <string-array name="android_wear_capabilities">
         <item>health_monitor_receiver</item>
+        <item>watch_face</item>
     </string-array>
 </resources>

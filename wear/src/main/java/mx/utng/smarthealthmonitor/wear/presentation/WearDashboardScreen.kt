@@ -11,6 +11,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.wear.compose.foundation.lazy.ScalingLazyColumn
+import androidx.wear.compose.foundation.lazy.ScalingLazyColumnDefaults
 import androidx.wear.compose.foundation.lazy.rememberScalingLazyListState
 import androidx.wear.compose.material.Chip
 import androidx.wear.compose.material.ChipDefaults
@@ -27,6 +28,7 @@ import mx.utng.smarthealthmonitor.wear.presentation.components.WearFCCard
 @Composable
 fun WearDashboardScreen(
     onAlertClick: () -> Unit = {},
+    onHistorialClick: () -> Unit = {},
     viewModel: WearDashboardViewModel = viewModel()
 ) {
     val fc by viewModel.fc.collectAsState()
@@ -43,6 +45,7 @@ fun WearDashboardScreen(
     ) {
         ScalingLazyColumn(
             state    = listState,
+            flingBehavior = ScalingLazyColumnDefaults.snapFlingBehavior(state = listState),
             modifier = Modifier.fillMaxSize()
         ) {
             item {
@@ -91,6 +94,14 @@ fun WearDashboardScreen(
                     modifier = Modifier.fillMaxWidth()
                 )
             }
+            item {
+                Chip(
+                    label = { Text("📋 Historial") },
+                    onClick = onHistorialClick,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+
         }
     }
 }

@@ -9,6 +9,7 @@ import android.graphics.Typeface
 import android.view.SurfaceHolder
 import androidx.wear.watchface.CanvasType
 import androidx.wear.watchface.ComplicationSlotsManager
+import androidx.wear.watchface.DrawMode
 import androidx.wear.watchface.Renderer
 import androidx.wear.watchface.WatchState
 import androidx.wear.watchface.style.CurrentUserStyleRepository
@@ -55,6 +56,13 @@ class SmartHealthRenderer(
                         zonedDateTime: ZonedDateTime,
                         sharedAssets: SharedAssets) {
 
+        val isAmbient = renderParameters.drawMode == DrawMode.AMBIENT
+
+        // Configurar AntiAlias según el modo (Ahorro de batería en AOD)
+        paintHora.isAntiAlias = !isAmbient
+        paintSub.isAntiAlias = !isAmbient
+        paintFC.isAntiAlias = !isAmbient
+
         // Fondo negro — ahorra batería en modo AOD
         canvas.drawColor(Color.BLACK)
 
@@ -65,22 +73,28 @@ class SmartHealthRenderer(
         val hora = String.format(Locale.getDefault(), "%02d:%02d",
             zonedDateTime.hour, zonedDateTime.minute)
         val tw = paintHora.measureText(hora)
-        canvas.drawText(hora, cx - tw/2, cy - 10f, paintHora)
 
-        // Segundos (pequeño debajo)
-        val seg = String.format(Locale.getDefault(), "%02d", zonedDateTime.second)
-        canvas.drawText(seg, cx - 18f, cy + 30f, paintSub)
+        // En modo AOD, centramos la hora un poco mejor verticalmente ya que no hay más elementos
+        val yPos = if (isAmbient) cy + (paintHora.textSize / 3f) else cy - 10f
+        canvas.drawText(hora, cx - tw / 2, yPos, paintHora)
 
-        // FC desde SmartHealthRepository
-        val fc = try {
-            SmartHealthRepository.fcFlow.value
-        } catch (e: Exception) {
-            0
-        }
-        if (fc > 0) {
-            val fcStr = "❤ $fc bpm"
-            val fcW = paintFC.measureText(fcStr)
-            canvas.drawText(fcStr, cx - fcW/2, cy + 70f, paintFC)
+        // Elementos extras solo si NO estamos en Ambient Mode
+        if (!isAmbient) {
+            // Segundos (pequeño debajo)
+            val seg = String.format(Locale.getDefault(), "%02d", zonedDateTime.second)
+            canvas.drawText(seg, cx - 18f, cy + 30f, paintSub)
+
+            // FC desde SmartHealthRepository
+            val fc = try {
+                SmartHealthRepository.fcFlow.value
+            } catch (e: Exception) {
+                0
+            }
+            if (fc > 0) {
+                val fcStr = "❤ $fc bpm"
+                val fcW = paintFC.measureText(fcStr)
+                canvas.drawText(fcStr, cx - fcW/2, cy + 70f, paintFC)
+            }
         }
     }
 

@@ -38,6 +38,13 @@ class MainFragment : BrowseSupportFragment() {
         MockData.historialFC.forEach { histAdapter.add(it) }
         rowsAdapter.add(ListRow(HeaderItem("Historial FC"), histAdapter))
 
+        // ── Fila 3: Alertas recientes ──────────────────
+        val alertAdapter = ArrayObjectAdapter(FCCardPresenter())
+        alertAdapter.add(LecturaFC(valorBpm = 115, hora = "08:20", esNormal = false))
+        alertAdapter.add(LecturaFC(valorBpm = 55, hora = "10:45", esNormal = false))
+        alertAdapter.add(LecturaFC(valorBpm = 120, hora = "14:10", esNormal = false))
+        rowsAdapter.add(ListRow(HeaderItem("Alertas recientes"), alertAdapter))
+
         this.adapter = rowsAdapter
     }
 }

@@ -29,15 +29,23 @@ class HealthDataService : PassiveListenerService() {
                 
                 if (bpm != ultimoBpm && bpm > 0) {
                     ultimoBpm = bpm
-                    Log.d("HealthDataService", "BPM recibido: $bpm. Enviando con AppScope...")
+                    Log.d("HealthDataService", "BPM recibido: $bpm. Sincronizando...")
                     
                     scope.launch {
                         try {
-                            wearDataSender.enviarFC(bpm)
                             SmartHealthRepository.actualizarFC(bpm)
-                            Log.d("HealthDataService", "FC enviada y guardada exitosamente")
+                            // Sincronización primaria (Data Layer)
+                            SmartHealthRepository.sincronizarConDataLayer(
+                                this@HealthDataService,
+                                bpm,
+                                SmartHealthRepository.pasosFlow.value
+                            )
+                            // Sincronización secundaria/respaldo (Messages)
+                            wearDataSender.enviarFC(bpm)
+                            
+                            Log.d("HealthDataService", "FC sincronizada exitosamente")
                         } catch (e: Exception) {
-                            Log.e("HealthDataService", "Error en proceso de FC", e)
+                            Log.e("HealthDataService", "Error en sincronización de FC", e)
                         }
                     }
                 }
@@ -73,10 +81,19 @@ class HealthDataService : PassiveListenerService() {
     private fun actualizarPasosEnRepo(pasos: Int, scope: CoroutineScope, wearDataSender: WearDataSender) {
         scope.launch {
             try {
-                wearDataSender.enviarPasos(pasos)
                 SmartHealthRepository.actualizarPasos(pasos)
+                // Sincronización primaria (Data Layer)
+                SmartHealthRepository.sincronizarConDataLayer(
+                    this@HealthDataService,
+                    SmartHealthRepository.fcFlow.value,
+                    pasos
+                )
+                // Sincronización secundaria/respaldo (Messages)
+                wearDataSender.enviarPasos(pasos)
+
+                Log.d("HealthDataService", "Pasos sincronizados: $pasos")
             } catch (e: Exception) {
-                Log.e("HealthDataService", "Error enviando pasos", e)
+                Log.e("HealthDataService", "Error sincronizando pasos", e)
             }
         }
     }

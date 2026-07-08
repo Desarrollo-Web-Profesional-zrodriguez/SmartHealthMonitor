@@ -9,13 +9,18 @@ import kotlinx.coroutines.flow.emptyFlow
 import mx.utng.smarthealthmonitor.data.db.LecturaFC
 import mx.utng.smarthealthmonitor.data.db.LecturaFCDao
 import mx.utng.smarthealthmonitor.data.db.SmartHealthDB
+import com.google.android.gms.wearable.PutDataMapRequest
+import com.google.android.gms.wearable.Wearable
+import kotlinx.coroutines.tasks.await
 
 /**
  * Repositorio singleton que centraliza los datos de salud.
- * El WearListenerService escribe aquí.
- * El ViewModel lee de aquí.
  */
 object SmartHealthRepository {
+    private const val TAG = "SmartHealthRepository"
+    private const val PATH_HEALTH_DATA = "/smarthealth/data"
+    private const val KEY_FC = "fc"
+    private const val KEY_PASOS = "pasos"
 
     // FC actual del wearable (bpm)
     private val _fcFlow = MutableStateFlow(0)
@@ -33,22 +38,42 @@ object SmartHealthRepository {
 
     fun init(context: Context) {
         if (dao == null) {
-            android.util.Log.d("SmartHealthRepository", "Initializing DB")
+            android.util.Log.d(TAG, "Initializing DB")
             dao = SmartHealthDB.getDatabase(context).lecturaDao()
         }
     }
 
-    suspend fun actualizarFC(bpm: Int) {
-        android.util.Log.d("SmartHealthRepository", "actualizarFC: $bpm")
-        _fcFlow.value = bpm
-        // Persistir en Room automáticamente
+    /**
+     * Sincroniza los datos con el Data Layer de Wear OS.
+     * Esto hace que el estado sea global y persistente en todos los dispositivos.
+     */
+    suspend fun sincronizarConDataLayer(context: Context, bpm: Int, pasos: Int) {
         try {
-            dao?.let {
-                it.insertar(LecturaFC(valorBpm = bpm))
-                android.util.Log.d("SmartHealthRepository", "FC guardada en BD")
-            } ?: android.util.Log.w("SmartHealthRepository", "DAO es nulo, no se pudo guardar FC")
+            val request = PutDataMapRequest.create(PATH_HEALTH_DATA).apply {
+                dataMap.putInt(KEY_FC, bpm)
+                dataMap.putInt(KEY_PASOS, pasos)
+                dataMap.putLong("timestamp", System.currentTimeMillis())
+            }.asPutDataRequest().setUrgent()
+
+            Wearable.getDataClient(context).putDataItem(request).await()
+            android.util.Log.d(TAG, "Data Layer sincronizado: FC=$bpm, Pasos=$pasos")
         } catch (e: Exception) {
-            android.util.Log.e("SmartHealthRepository", "Error al guardar FC en BD", e)
+            android.util.Log.e(TAG, "Error al sincronizar con Data Layer", e)
+        }
+    }
+
+    suspend fun actualizarFC(bpm: Int, guardarEnBD: Boolean = true) {
+        android.util.Log.d(TAG, "actualizarFC: $bpm")
+        _fcFlow.value = bpm
+        if (guardarEnBD) {
+            try {
+                dao?.let {
+                    it.insertar(LecturaFC(valorBpm = bpm))
+                    android.util.Log.d(TAG, "FC guardada en BD")
+                }
+            } catch (e: Exception) {
+                android.util.Log.e(TAG, "Error al guardar FC en BD", e)
+            }
         }
     }
 

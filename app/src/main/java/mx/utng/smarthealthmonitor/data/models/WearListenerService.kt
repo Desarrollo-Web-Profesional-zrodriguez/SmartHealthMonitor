@@ -1,6 +1,9 @@
 package mx.utng.smarthealthmonitor.data.models
 
 import android.util.Log
+import com.google.android.gms.wearable.DataEvent
+import com.google.android.gms.wearable.DataEventBuffer
+import com.google.android.gms.wearable.DataMapItem
 import com.google.android.gms.wearable.MessageEvent
 import com.google.android.gms.wearable.WearableListenerService
 import kotlinx.coroutines.CoroutineScope
@@ -13,9 +16,7 @@ class WearListenerService : WearableListenerService() {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     companion object {
-        const val PATH_FC    = "/smarthealthmonitor/fc"
-        const val PATH_PASOS = "/smarthealthmonitor/pasos"
-        const val PATH_SPO2  = "/smarthealthmonitor/spo2"
+        const val PATH_HEALTH_DATA = "/smarthealth/data"
         private const val TAG = "WearListener"
     }
 
@@ -25,28 +26,46 @@ class WearListenerService : WearableListenerService() {
         SmartHealthRepository.init(this)
     }
 
-    override fun onMessageReceived(messageEvent: MessageEvent) {
-        val data   = String(messageEvent.data)
-        val path   = messageEvent.path
-        Log.i(TAG, "¡MENSAJE RECIBIDO! path=$path, data=$data")
+    override fun onDataChanged(dataEvents: DataEventBuffer) {
+        Log.d(TAG, "onDataChanged: ${dataEvents.count} eventos recibidos")
+        dataEvents.forEach { event ->
+            Log.d(TAG, "Evento: tipo=${event.type}, path=${event.dataItem.uri.path}")
+            if (event.type == DataEvent.TYPE_CHANGED && event.dataItem.uri.path == PATH_HEALTH_DATA) {
+                val dataMap = DataMapItem.fromDataItem(event.dataItem).dataMap
+                val bpm = dataMap.getInt("fc", 0)
+                val pasos = dataMap.getInt("pasos", 0)
 
-        when (path) {
-            PATH_FC -> {
-                val bpm = data.toIntOrNull() ?: return
-                Log.d(TAG, "Actualizando FC en repositorio: $bpm")
+                Log.i(TAG, "Sincronización Data Layer RECIBIDA: FC=$bpm, Pasos=$pasos")
+
                 scope.launch {
-                    SmartHealthRepository.actualizarFC(bpm)
+                    if (bpm > 0) SmartHealthRepository.actualizarFC(bpm)
+                    if (pasos > 0) SmartHealthRepository.actualizarPasos(pasos)
                 }
             }
-            PATH_PASOS -> {
-                val pasos = data.toIntOrNull() ?: return
-                SmartHealthRepository.actualizarPasos(pasos)
+        }
+    }
+
+    override fun onMessageReceived(messageEvent: MessageEvent) {
+        Log.d(TAG, "Mensaje recibido: path=${messageEvent.path}")
+        val data = String(messageEvent.data)
+        
+        scope.launch {
+            when (messageEvent.path) {
+                "/smarthealthmonitor/fc" -> {
+                    val bpm = data.toIntOrNull() ?: 0
+                    Log.i(TAG, "Mensaje de FC recibido: $bpm")
+                    if (bpm > 0) SmartHealthRepository.actualizarFC(bpm)
+                }
+                "/smarthealthmonitor/pasos" -> {
+                    val pasos = data.toIntOrNull() ?: 0
+                    Log.i(TAG, "Mensaje de Pasos recibido: $pasos")
+                    if (pasos > 0) SmartHealthRepository.actualizarPasos(pasos)
+                }
+                "/smarthealth/data" -> {
+                    // Soporte para el mismo path que Data Layer pero vía mensaje
+                    Log.i(TAG, "Mensaje de data genérico recibido")
+                }
             }
-            PATH_SPO2 -> {
-                val spo2 = data.toIntOrNull() ?: return
-                SmartHealthRepository.actualizarSpO2(spo2)
-            }
-            else -> Log.w(TAG, "Path desconocido: $path")
         }
     }
 }

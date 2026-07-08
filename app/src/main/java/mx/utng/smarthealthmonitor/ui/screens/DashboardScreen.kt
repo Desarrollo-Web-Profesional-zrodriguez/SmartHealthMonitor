@@ -42,6 +42,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import kotlinx.coroutines.launch
 import mx.utng.smarthealthmonitor.BuildConfig
+import mx.utng.smarthealthmonitor.data.models.AppDataSender
 import mx.utng.smarthealthmonitor.ui.viewmodel.DashboardViewModel
 import mx.utng.smarthealthmonitor.FilaHistorial
 import mx.utng.smarthealthmonitor.data.models.MockData
@@ -187,19 +188,29 @@ fun DashboardScreen(
                 item {
                     // Botón de simulación — SOLO PARA DEBUG
                     val scope = rememberCoroutineScope()
+                    val context = androidx.compose.ui.platform.LocalContext.current
+                    val dataSender = remember { AppDataSender(context) }
+                    
                     if (BuildConfig.DEBUG) {
                         OutlinedButton (
                             onClick = {
                                 // Simular lectura del wearable
                                 val fcSimulado = (60..110).random()
+                                val pasosSimulados = (3000..8000).random()
                                 scope.launch {
                                     SmartHealthRepository.actualizarFC(fcSimulado)
+                                    SmartHealthRepository.actualizarPasos(pasosSimulados)
+                                    // Sincronizar vía Data Layer (Estado Global)
+                                    SmartHealthRepository.sincronizarConDataLayer(
+                                        context,
+                                        fcSimulado,
+                                        pasosSimulados
+                                    )
                                 }
-                                SmartHealthRepository.actualizarPasos((3000..8000).random())
                             },
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Text("Simular dato del wearable (DEBUG)")
+                            Text("Simular y Sincronizar (DEBUG)")
                         }
                     }
                 }

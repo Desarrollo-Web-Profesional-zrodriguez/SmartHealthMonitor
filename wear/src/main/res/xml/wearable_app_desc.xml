@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wearableApp package="mx.utng.smarthealthmonitor.wear">
+<wearableApp package="mx.utng.smarthealthmonitor">
     <versionCode>1</versionCode>
     <versionName>1.0</versionName>
     <className>mx.utng.smarthealthmonitor.wear.watchface.SmartHealthWatchFaceServiceV2</className>

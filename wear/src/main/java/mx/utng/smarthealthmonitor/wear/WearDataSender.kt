@@ -20,37 +20,42 @@ class WearDataSender(private val context: Context) {
 
     private suspend fun enviarMensaje(path: String, data: String) {
         try {
-            // 1. Buscamos nodos que tengan la capacidad de recibir datos y estén ALCANCE (REACHABLE)
+            // 1. Buscamos nodos que tengan la capacidad de recibir datos
             val capabilityInfo = Wearable.getCapabilityClient(context)
-                .getCapability("health_monitor_receiver", CapabilityClient.FILTER_REACHABLE)
+                .getCapability("health_monitor_receiver", CapabilityClient.FILTER_ALL) // Cambiado a FILTER_ALL
                 .await()
             
-            val targetNodes = capabilityInfo.nodes.filter { it.isNearby }.toMutableSet()
-            Log.d("WearDataSender", "Nodos cercanos con capacidad encontrados: ${targetNodes.size}")
+            val targetNodes = capabilityInfo.nodes.toMutableSet()
+            Log.d("WearDataSender", "Nodos con capacidad encontrados: ${targetNodes.size}")
             
-            // 2. Si no hay nodos cercanos con la capacidad, intentamos con todos los nodos conectados como respaldo
+            // 2. Si no hay nodos con la capacidad, intentamos con todos los nodos conectados como respaldo
             if (targetNodes.isEmpty()) {
-                Log.w("WearDataSender", "No se encontraron nodos cercanos con capacidad. Intentando con todos los nodos conectados...")
+                Log.w("WearDataSender", "No se encontraron nodos con capacidad. Intentando con todos los nodos conectados...")
                 val allNodes = Wearable.getNodeClient(context).connectedNodes.await()
-                targetNodes.addAll(allNodes.filter { it.isNearby })
+                targetNodes.addAll(allNodes)
             }
 
             if (targetNodes.isEmpty()) {
-                Log.w("WearDataSender", "FALLO: No se detectaron dispositivos conectados.")
+                Log.e("WearDataSender", "FALLO CRÍTICO: No se detectaron dispositivos (Phone o TV) conectados.")
                 return
             }
 
-            // 3. Enviamos el mensaje a cada nodo único una sola vez
+            // 3. Enviamos el mensaje a cada nodo único
             targetNodes.forEach { node ->
-                Log.d("WearDataSender", "Enviando a: ${node.displayName} (id: ${node.id})")
-                Wearable.getMessageClient(context).sendMessage(
-                    node.id,
-                    path,
-                    data.toByteArray()
-                ).await()
+                Log.d("WearDataSender", "Enviando data ($path) a: ${node.displayName} (id: ${node.id})")
+                try {
+                    Wearable.getMessageClient(context).sendMessage(
+                        node.id,
+                        path,
+                        data.toByteArray()
+                    ).await()
+                    Log.i("WearDataSender", "Mensaje enviado exitosamente a ${node.displayName}")
+                } catch (e: Exception) {
+                    Log.e("WearDataSender", "Error al enviar mensaje a nodo ${node.id}", e)
+                }
             }
         } catch (e: Exception) {
-            Log.e("WearDataSender", "Error al enviar mensaje", e)
+            Log.e("WearDataSender", "Error general en WearDataSender", e)
         }
     }
 }

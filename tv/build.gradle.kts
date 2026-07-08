@@ -9,7 +9,7 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "mx.utng.smarthealthmonitor.tv"
+        applicationId = "mx.utng.smarthealthmonitor"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
@@ -38,11 +38,14 @@ dependencies {
     implementation("androidx.leanback:leanback:1.2.0")
     // Glide para cargar imágenes en las cards
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    // Wearable Data Layer API para TV
+    implementation(libs.play.services.wearable)
     // Compartir Room + Repository con módulo shared
     implementation(project(":shared"))
     // ViewModel + Coroutines
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
+    implementation("androidx.fragment:fragment-ktx:1.8.5")
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.appcompat)

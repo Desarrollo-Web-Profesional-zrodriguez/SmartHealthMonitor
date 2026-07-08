@@ -9,7 +9,7 @@ android {
     compileSdk = 37                          // ← corregido
 
     defaultConfig {
-        applicationId = "mx.utng.smarthealthmonitor.wear"  // ← corregido
+        applicationId = "mx.utng.smarthealthmonitor"
         minSdk = 30
         targetSdk = 35
         versionCode = 1

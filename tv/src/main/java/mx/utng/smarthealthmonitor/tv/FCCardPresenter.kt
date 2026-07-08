@@ -23,14 +23,24 @@ class FCCardPresenter : Presenter() {
         val card    = viewHolder.view as ImageCardView
         val lectura = item as LecturaFC
 
-        card.titleText   = "${lectura.valorBpm} bpm"
+        if (lectura.hora == "Pasos") {
+            card.titleText = "${lectura.valorBpm} pasos"
+        } else {
+            card.titleText = "${lectura.valorBpm} bpm"
+        }
         card.contentText = lectura.hora
 
-        // Color de fondo según si FC es normal
-        val bgColor = if (lectura.esNormal) {
-            Color.parseColor("#1B4F8A")  // primary
+        // Color de fondo según si FC es normal (o si son pasos)
+        val isHealthy = if (lectura.hora == "Pasos") {
+            lectura.valorBpm >= 0 // Siempre azul para pasos
         } else {
-            Color.parseColor("#B3261E")  // error
+            lectura.esNormal
+        }
+
+        val bgColor = if (isHealthy) {
+            Color.parseColor("#1B4F8A")  // primary (azul)
+        } else {
+            Color.parseColor("#B3261E")  // error (rojo)
         }
         card.setBackgroundColor(bgColor)
     }

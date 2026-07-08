@@ -4,4 +4,7 @@
     <color name="sh_amber">#D4860A</color>
     <color name="sh_dark">#0D1117</color>
     <color name="sh_error">#B3261E</color>
+    <!-- Colores dinámicos -->
+    <color name="sh_background">#FFFFFF</color>
+    <color name="sh_text">#0D1117</color>
 </resources>

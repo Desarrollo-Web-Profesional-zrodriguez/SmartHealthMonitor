@@ -1,24 +1,43 @@
 package mx.utng.smarthealthmonitor.tv
 
 import android.os.Bundle
-import androidx.core.content.ContextCompat
+import android.view.View
 import androidx.leanback.app.BrowseSupportFragment
+import androidx.leanback.widget.*
+import mx.utng.smarthealthmonitor.data.models.MockData
+import mx.utng.smarthealthmonitor.data.db.LecturaFC
 
-/**
- * Fragmento principal para Android TV usando Leanback.
- */
 class MainFragment : BrowseSupportFragment() {
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        @Suppress("DEPRECATION")
-        super.onActivityCreated(savedInstanceState)
-        setupUIElements()
-    }
 
-    private fun setupUIElements() {
-        title = "SmartHealth TV"
-        // Aquí se configurarán las filas y el adaptador más adelante
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Configuración del BrowseFragment
+        title        = "SmartHealth TV"
         headersState = HEADERS_ENABLED
         isHeadersTransitionOnBackEnabled = true
-        brandColor = ContextCompat.getColor(requireContext(), R.color.sh_primary)
+
+        // Color de la marca en el sidebar
+        brandColor = resources.getColor(R.color.sh_primary, null)
+
+        cargarFilas()
+    }
+
+    private fun cargarFilas() {
+        val rowsAdapter = ArrayObjectAdapter(ListRowPresenter())
+
+        // ── Fila 1: Estado actual (FC + Pasos) ───────────
+        val estadoAdapter = ArrayObjectAdapter(FCCardPresenter())
+        // Datos simulados — en Ej.03 vendrán de Room
+        estadoAdapter.add(LecturaFC(id=0, valorBpm=88, hora="Ahora"))
+        estadoAdapter.add(LecturaFC(id=1, valorBpm=4250, hora="Pasos"))
+        rowsAdapter.add(ListRow(HeaderItem("Estado actual"), estadoAdapter))
+
+        // ── Fila 2: Historial de FC ────────────────────
+        val histAdapter = ArrayObjectAdapter(FCCardPresenter())
+        MockData.historialFC.forEach { histAdapter.add(it) }
+        rowsAdapter.add(ListRow(HeaderItem("Historial FC"), histAdapter))
+
+        this.adapter = rowsAdapter
     }
 }

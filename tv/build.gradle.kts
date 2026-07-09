@@ -47,6 +47,10 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.lifecycle.runtime.compose)
 
+    // Media3 ExoPlayer — para reproducción de video
+    implementation("androidx.media3:media3-exoplayer:1.5.1")
+    implementation("androidx.media3:media3-ui:1.5.1")
+
     // Wearable Data Layer API para TV
     implementation(libs.play.services.wearable)
     // Compartir Room + Repository con módulo shared

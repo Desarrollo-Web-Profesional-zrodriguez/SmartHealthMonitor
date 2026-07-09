@@ -34,28 +34,34 @@ android {
 }
 
 dependencies {
-    // Leanback Library — el estándar de Android TV
-    implementation("androidx.leanback:leanback:1.2.0")
-    // Glide para cargar imágenes en las cards
-    implementation("com.github.bumptech.glide:glide:4.16.0")
+    // Compose for TV — reemplaza Leanback Library
+    implementation("androidx.tv:tv-foundation:1.0.0")
+    implementation("androidx.tv:tv-material:1.0.0")
+
+    // Compose base
+    implementation(platform(libs.androidx.compose.bom))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.foundation:foundation")
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+
     // Wearable Data Layer API para TV
     implementation(libs.play.services.wearable)
     // Compartir Room + Repository con módulo shared
     implementation(project(":shared"))
+
     // ViewModel + Coroutines
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
-    implementation("androidx.fragment:fragment-ktx:1.8.5")
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.ui.graphics)
-    implementation(libs.androidx.compose.ui.tooling.preview)
+    
+    implementation(libs.androidx.compose.material3)
+
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.tv.foundation)
-    implementation(libs.androidx.tv.material)
+
+    testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.test.manifest)

@@ -14,7 +14,7 @@
         android:theme="@style/Theme.SmartHealthTV"
         android:banner="@drawable/banner_tv"
         android:icon="@drawable/banner_tv"> <!-- Usando el banner como icono temporal -->
-        <activity android:name=".MainActivity"
+        <activity android:name=".TVActivity"
             android:exported="true"
             android:label="SmartHealth TV">
             <intent-filter>

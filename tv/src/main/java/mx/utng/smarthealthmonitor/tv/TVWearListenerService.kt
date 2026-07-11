@@ -35,18 +35,24 @@ class TVWearListenerService : WearableListenerService() {
             val extraData = it.getStringExtra("android.intent.extra.DATA")
             
             if (action == "com.google.android.gms.wearable.MESSAGE_RECEIVED" && dataUri != null && extraData != null) {
-                val path = dataUri.path
-                Log.d(TAG, "Simulación ADB recibida: path=$path, data=$extraData")
+                val fullPath = dataUri.path ?: ""
+                Log.d(TAG, "Simulación ADB recibida: path=$fullPath, data=$extraData")
                 
                 scope.launch {
-                    when (path) {
-                        "/smarthealthmonitor/fc" -> {
+                    // Verificamos si el path contiene el fragmento esperado al final
+                    when {
+                        fullPath.endsWith("/fc") -> {
                             val bpm = extraData.toIntOrNull() ?: 0
+                            Log.d(TAG, "Procesando FC: $bpm")
                             if (bpm > 0) SmartHealthRepository.actualizarFC(bpm, guardarEnBD = true)
                         }
-                        "/smarthealthmonitor/pasos" -> {
+                        fullPath.endsWith("/pasos") -> {
                             val pasos = extraData.toIntOrNull() ?: 0
+                            Log.d(TAG, "Procesando Pasos: $pasos")
                             if (pasos > 0) SmartHealthRepository.actualizarPasos(pasos)
+                        }
+                        else -> {
+                            Log.w(TAG, "Path no reconocido en simulación: $fullPath")
                         }
                     }
                 }

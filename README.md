@@ -69,6 +69,62 @@
   </table>
 </div>
 
+## 🏗️ Arquitectura — SmartHealth Monitor
+
+La aplicación sigue un flujo de datos reactivo y distribuido entre tres plataformas (Wear OS, Mobile y TV) utilizando la **Wearable Data Layer API** y **Google Cast**.
+
+```mermaid
+graph TD
+    subgraph "⌚ Wear OS (Reloj)"
+        PPG[Sensor PPG] -- Health Services API --> PLS[PassiveListenerService]
+        PLS -- MessageClient BLE --> WLS
+    end
+
+    subgraph "📱 Handheld (Teléfono)"
+        WLS[WearListenerService] -- Repository --> SHR[SmartHealthRepository]
+        SHR -- StateFlow/Flow --> DVM[DashboardViewModel]
+        DVM -- collectAsState --> DS[DashboardScreen]
+        DS -- CastButton --> GC[Google Cast / Chromecast]
+        SHR <--> Room[(Room DB)]
+    end
+
+    subgraph "📺 Android TV"
+        TVLS[TVWearListenerService] -- Repository --> SHR_TV[SmartHealthRepository]
+        SHR_TV -- StateFlow/Flow --> TVM[TvViewModel]
+        TVM -- collectAsState --> TCS[TvCatalogScreen]
+    end
+
+    WLS -.-> TVLS
+```
+
+### Detalle del Flujo de Datos
+
+```text
+Sensor PPG (Wear OS)
+    │  Health Services API
+    ▼
+PassiveListenerService (wear)
+    │  MessageClient (BLE)
+    ▼
+WearListenerService (app)
+    │  SmartHealthRepository
+    ▼
+StateFlow<Int> (fcActual)  ──────────────────────────────────┐
+    │                                                        │
+    ▼                                                        ▼
+DashboardViewModel (app)              TvViewModel (tv)
+    │  collectAsState()                    │  collectAsState()
+    ▼                                        ▼
+DashboardScreen (Compose)          TvCatalogScreen (Compose TV)
+    └── CastButton ──► Chromecast (Remote Playback)
+ 
+Room DB (LecturaFC)  ◄──  Repository  ──►  Flow<List<LecturaFC>>
+                                                │
+                          ┌─────────────────────┴──────────┐
+                          ▼                                ▼
+               HistorialScreen (app)        TvCatalogScreen (tv)
+```
+
 ---
 
 ## 👤 Autor

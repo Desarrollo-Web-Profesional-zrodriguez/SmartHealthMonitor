@@ -11,14 +11,14 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.Surface
-import mx.utng.smarthealthmonitor.tv.ui.theme.SartHealthMonitorTheme
+import mx.utng.smarthealthmonitor.tv.ui.theme.SmartHealthTvTheme
 
 class tv : ComponentActivity() {
     @OptIn(ExperimentalTvMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SartHealthMonitorTheme {
+            SmartHealthTvTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     shape = RectangleShape
@@ -41,7 +41,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    SartHealthMonitorTheme {
+    SmartHealthTvTheme {
         Greeting("Android")
     }
 }

@@ -42,6 +42,7 @@ import androidx.compose.material3.SnackbarResult
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import android.view.ContextThemeWrapper
 import androidx.mediarouter.app.MediaRouteButton
 import com.google.android.gms.cast.framework.CastButtonFactory
 import kotlinx.coroutines.launch
@@ -52,6 +53,7 @@ import mx.utng.smarthealthmonitor.FilaHistorial
 import mx.utng.smarthealthmonitor.data.models.MockData
 import mx.utng.smarthealthmonitor.data.models.SmartHealthRepository
 import mx.utng.smarthealthmonitor.ui.components.TarjetaDato
+import mx.utng.smarthealthmonitor.R
 import mx.utng.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -115,8 +117,14 @@ fun DashboardScreen(
                         // CastButton: AndroidView que envuelve MediaRouteButton
                         AndroidView(
                             factory = { context ->
-                                MediaRouteButton(context).apply {
-                                    CastButtonFactory.setUpMediaRouteButton(context, this)
+                                // Corregimos el crash "background can not be translucent"
+                                // Usamos un tema específico que garantice fondo opaco
+                                val themedContext = android.view.ContextThemeWrapper(
+                                    context, 
+                                    R.style.Theme_SartHealthMonitor_Cast
+                                )
+                                MediaRouteButton(themedContext).apply {
+                                    CastButtonFactory.setUpMediaRouteButton(themedContext, this)
                                 }
                             },
                             modifier = Modifier.size(48.dp)

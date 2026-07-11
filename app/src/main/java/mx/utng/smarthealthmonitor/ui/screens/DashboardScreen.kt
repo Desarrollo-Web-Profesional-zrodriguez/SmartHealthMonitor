@@ -119,7 +119,7 @@ fun DashboardScreen(
                             factory = { context ->
                                 // Corregimos el crash "background can not be translucent"
                                 // Usamos un tema específico que garantice fondo opaco
-                                val themedContext = android.view.ContextThemeWrapper(
+                                val themedContext = ContextThemeWrapper(
                                     context, 
                                     R.style.Theme_SartHealthMonitor_Cast
                                 )

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <!-- Declarar que es una app de TV -->
     <uses-feature android:name="android.software.leanback"
         android:required="true" />
@@ -13,11 +11,10 @@
         android:name=".SmartHealthTVApp"
         android:allowBackup="true"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.SmartHealthTV"
         android:banner="@drawable/banner_tv"
         android:icon="@drawable/banner_tv"> <!-- Usando el banner como icono temporal -->
-        <activity android:name=".TVActivity"
+        <activity android:name=".MainActivity"
             android:exported="true"
             android:label="SmartHealth TV">
             <intent-filter>

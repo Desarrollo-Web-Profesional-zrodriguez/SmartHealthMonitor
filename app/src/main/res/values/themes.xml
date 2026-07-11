@@ -2,4 +2,10 @@
 <resources>
 
     <style name="Theme.SartHealthMonitor" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.SartHealthMonitor.Cast" parent="Theme.AppCompat.Light">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="isLightTheme">true</item>
+    </style>
 </resources>

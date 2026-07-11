@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.DirectionsWalk
 import androidx.compose.material.icons.filled.Bloodtype
@@ -32,6 +33,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -40,6 +42,9 @@ import androidx.compose.material3.SnackbarResult
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import android.view.ContextThemeWrapper
+import androidx.mediarouter.app.MediaRouteButton
+import com.google.android.gms.cast.framework.CastButtonFactory
 import kotlinx.coroutines.launch
 import mx.utng.smarthealthmonitor.BuildConfig
 import mx.utng.smarthealthmonitor.data.models.AppDataSender
@@ -48,6 +53,7 @@ import mx.utng.smarthealthmonitor.FilaHistorial
 import mx.utng.smarthealthmonitor.data.models.MockData
 import mx.utng.smarthealthmonitor.data.models.SmartHealthRepository
 import mx.utng.smarthealthmonitor.ui.components.TarjetaDato
+import mx.utng.smarthealthmonitor.R
 import mx.utng.smarthealthmonitor.ui.theme.SmartHealthMonitorTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -107,10 +113,28 @@ fun DashboardScreen(
                             style = MaterialTheme.typography.titleLarge
                         )
                     },
+                    actions = {
+                        // CastButton: AndroidView que envuelve MediaRouteButton
+                        AndroidView(
+                            factory = { context ->
+                                // Corregimos el crash "background can not be translucent"
+                                // Usamos un tema específico que garantice fondo opaco
+                                val themedContext = ContextThemeWrapper(
+                                    context, 
+                                    R.style.Theme_SartHealthMonitor_Cast
+                                )
+                                MediaRouteButton(themedContext).apply {
+                                    CastButtonFactory.setUpMediaRouteButton(themedContext, this)
+                                }
+                            },
+                            modifier = Modifier.size(48.dp)
+                        )
+                    },
                     colors = TopAppBarDefaults
                         .topAppBarColors(
                             containerColor    = MaterialTheme.colorScheme.primary,
-                            titleContentColor = MaterialTheme.colorScheme.onPrimary
+                            titleContentColor = MaterialTheme.colorScheme.onPrimary,
+                            actionIconContentColor = MaterialTheme.colorScheme.onPrimary
                         )
                 )
             },

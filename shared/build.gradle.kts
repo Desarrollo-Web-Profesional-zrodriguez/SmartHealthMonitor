@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
 }
 
@@ -9,6 +10,14 @@ android {
 
     defaultConfig {
         minSdk = 26
+        buildConfigField("String", "MQTT_BROKER_URL", "\"${project.findProperty("mqtt.broker.url") ?: ""}\"")
+        buildConfigField("String", "MQTT_PORT", "\"${project.findProperty("mqtt.port") ?: "8883"}\"")
+        buildConfigField("String", "MQTT_USER", "\"${project.findProperty("mqtt.user") ?: ""}\"")
+        buildConfigField("String", "MQTT_PASSWORD", "\"${project.findProperty("mqtt.password") ?: ""}\"")
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     compileOptions {
@@ -24,4 +33,6 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.play.services)
     implementation(libs.play.services.wearable)
+    // Kotlinx Serialization para JSON
+    implementation(libs.kotlinx.serialization.json)
 }

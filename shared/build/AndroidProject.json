@@ -1,0 +1,907 @@
+{
+    "namespace": "mx.utng.smarthealthmonitor.shared",
+    "androidTestNamespace": "mx.utng.smarthealthmonitor.shared.test",
+    "testFixturesNamespace": null,
+    "variants": [
+        {
+            "name": "debug",
+            "displayName": "debug",
+            "mainArtifact": {
+                "minSdkVersion": {
+                    "apiLevel": 26,
+                    "codename": null
+                },
+                "targetSdkVersionOverride": null,
+                "maxSdkVersion": null,
+                "signingConfigName": null,
+                "applicationId": null,
+                "abiFilters": [
+                    "armeabi-v7a",
+                    "arm64-v8a",
+                    "x86",
+                    "x86_64"
+                ],
+                "testInfo": null,
+                "bundleInfo": null,
+                "codeShrinker": null,
+                "compileTaskName": "compileDebugSources",
+                "assembleTaskName": "assembleDebug",
+                "sourceGenTaskName": "generateDebugSources",
+                "resGenTaskName": "generateDebugResources",
+                "ideSetupTaskNames": [
+                    "generateDebugSources"
+                ],
+                "generatedSourceFolders": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debug\\out",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debug\\out",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "out",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debug\\out",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\debug",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\debug",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "debug",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\debug",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "generatedResourceFolders": [
+                    
+                ],
+                "classesFolders": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debug\\compileDebugJavaWithJavac\\classes",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debug\\compileDebugJavaWithJavac\\classes",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "classes",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debug\\compileDebugJavaWithJavac",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debug\\compileDebugJavaWithJavac\\classes",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debug\\generateDebugRFile\\R.jar",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debug\\generateDebugRFile\\R.jar",
+                        "directory": false,
+                        "file": true,
+                        "freeSpace": 137897762816,
+                        "hidden": false,
+                        "name": "R.jar",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debug\\generateDebugRFile",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debug\\generateDebugRFile\\R.jar",
+                        "totalSpace": 865170616320,
+                        "usableSpace": 137897762816
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debug\\compileDebugKotlin\\classes",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debug\\compileDebugKotlin\\classes",
+                        "directory": true,
+                        "file": false,
+                        "freeSpace": 137897762816,
+                        "hidden": false,
+                        "name": "classes",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debug\\compileDebugKotlin",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debug\\compileDebugKotlin\\classes",
+                        "totalSpace": 865170616320,
+                        "usableSpace": 137897762816
+                    }
+                ],
+                "assembleTaskOutputListingFile": null,
+                "desugaredMethodsFiles": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                        "canonicalPath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                        "directory": false,
+                        "file": true,
+                        "freeSpace": 137897762816,
+                        "hidden": false,
+                        "name": "D8BackportedDesugaredMethods.txt",
+                        "parent": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed",
+                        "path": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                        "totalSpace": 865170616320,
+                        "usableSpace": 137897762816
+                    }
+                ],
+                "generatedClassPaths": {
+                    
+                },
+                "bytecodeTransformations": [
+                    
+                ],
+                "generatedAssetsFolders": [
+                    
+                ],
+                "mappingR8TextFile": null,
+                "mappingR8PartitionFile": null,
+                "modelSyncFiles": [
+                    
+                ],
+                "signed": false
+            },
+            "deviceTestArtifacts": {
+                "_android_test_": {
+                    "minSdkVersion": {
+                        "apiLevel": 26,
+                        "codename": null
+                    },
+                    "targetSdkVersionOverride": null,
+                    "maxSdkVersion": null,
+                    "signingConfigName": "debug",
+                    "applicationId": "mx.utng.smarthealthmonitor.shared.test",
+                    "abiFilters": [
+                        "armeabi-v7a",
+                        "arm64-v8a",
+                        "x86",
+                        "x86_64"
+                    ],
+                    "testInfo": {
+                        "animationsDisabled": false,
+                        "execution": "HOST",
+                        "additionalRuntimeApks": [
+                            
+                        ],
+                        "instrumentedTestTaskName": "connectedDebugAndroidTest"
+                    },
+                    "bundleInfo": null,
+                    "codeShrinker": null,
+                    "compileTaskName": "compileDebugAndroidTestSources",
+                    "assembleTaskName": "assembleDebugAndroidTest",
+                    "sourceGenTaskName": "generateDebugAndroidTestSources",
+                    "resGenTaskName": "generateDebugAndroidTestResources",
+                    "ideSetupTaskNames": [
+                        "generateDebugAndroidTestSources"
+                    ],
+                    "generatedSourceFolders": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugAndroidTest\\out",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugAndroidTest\\out",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "out",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugAndroidTest",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugAndroidTest\\out",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        },
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\androidTest\\debug",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\androidTest\\debug",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "debug",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\androidTest",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\androidTest\\debug",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "generatedResourceFolders": [
+                        
+                    ],
+                    "classesFolders": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugAndroidTest\\compileDebugAndroidTestJavaWithJavac\\classes",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugAndroidTest\\compileDebugAndroidTestJavaWithJavac\\classes",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "classes",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugAndroidTest\\compileDebugAndroidTestJavaWithJavac",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugAndroidTest\\compileDebugAndroidTestJavaWithJavac\\classes",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        },
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debugAndroidTest\\generateDebugAndroidTestRFile\\R.jar",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debugAndroidTest\\generateDebugAndroidTestRFile\\R.jar",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "R.jar",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debugAndroidTest\\generateDebugAndroidTestRFile",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debugAndroidTest\\generateDebugAndroidTestRFile\\R.jar",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        },
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugAndroidTest\\compileDebugAndroidTestKotlin\\classes",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugAndroidTest\\compileDebugAndroidTestKotlin\\classes",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "classes",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugAndroidTest\\compileDebugAndroidTestKotlin",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugAndroidTest\\compileDebugAndroidTestKotlin\\classes",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "assembleTaskOutputListingFile": {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\apk_ide_redirect_file\\debugAndroidTest\\createDebugAndroidTestApkListingFileRedirect\\redirect.txt",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\apk_ide_redirect_file\\debugAndroidTest\\createDebugAndroidTestApkListingFileRedirect\\redirect.txt",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "redirect.txt",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\apk_ide_redirect_file\\debugAndroidTest\\createDebugAndroidTestApkListingFileRedirect",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\apk_ide_redirect_file\\debugAndroidTest\\createDebugAndroidTestApkListingFileRedirect\\redirect.txt",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    "desugaredMethodsFiles": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                            "canonicalPath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                            "directory": false,
+                            "file": true,
+                            "freeSpace": 137897762816,
+                            "hidden": false,
+                            "name": "D8BackportedDesugaredMethods.txt",
+                            "parent": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed",
+                            "path": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                            "totalSpace": 865170616320,
+                            "usableSpace": 137897762816
+                        }
+                    ],
+                    "generatedClassPaths": {
+                        
+                    },
+                    "bytecodeTransformations": [
+                        
+                    ],
+                    "generatedAssetsFolders": [
+                        
+                    ],
+                    "mappingR8TextFile": null,
+                    "mappingR8PartitionFile": null,
+                    "modelSyncFiles": [
+                        
+                    ],
+                    "signed": true
+                }
+            },
+            "hostTestArtifacts": {
+                "_unit_test_": {
+                    "mockablePlatformJar": {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\d16221ef5c08afbd068d3588f3490ebb\\transformed\\android.jar",
+                        "canonicalPath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\d16221ef5c08afbd068d3588f3490ebb\\transformed\\android.jar",
+                        "directory": false,
+                        "file": true,
+                        "freeSpace": 137897762816,
+                        "hidden": false,
+                        "name": "android.jar",
+                        "parent": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\d16221ef5c08afbd068d3588f3490ebb\\transformed",
+                        "path": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\d16221ef5c08afbd068d3588f3490ebb\\transformed\\android.jar",
+                        "totalSpace": 865170616320,
+                        "usableSpace": 137897762816
+                    },
+                    "compileTaskName": "compileDebugUnitTestSources",
+                    "assembleTaskName": "assembleDebugUnitTest",
+                    "classesFolders": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugUnitTest\\compileDebugUnitTestJavaWithJavac\\classes",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugUnitTest\\compileDebugUnitTestJavaWithJavac\\classes",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "classes",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugUnitTest\\compileDebugUnitTestJavaWithJavac",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugUnitTest\\compileDebugUnitTestJavaWithJavac\\classes",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        },
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugUnitTest\\compileDebugUnitTestKotlin\\classes",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugUnitTest\\compileDebugUnitTestKotlin\\classes",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "classes",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugUnitTest\\compileDebugUnitTestKotlin",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugUnitTest\\compileDebugUnitTestKotlin\\classes",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        },
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_and_runtime_r_class_jar\\debugUnitTest\\generateDebugUnitTestStubRFile\\R.jar",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_and_runtime_r_class_jar\\debugUnitTest\\generateDebugUnitTestStubRFile\\R.jar",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "R.jar",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_and_runtime_r_class_jar\\debugUnitTest\\generateDebugUnitTestStubRFile",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_and_runtime_r_class_jar\\debugUnitTest\\generateDebugUnitTestStubRFile\\R.jar",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "runtimeResourceFolder": {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\java_res\\debugUnitTest\\processDebugUnitTestJavaRes\\out",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\java_res\\debugUnitTest\\processDebugUnitTestJavaRes\\out",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "out",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\java_res\\debugUnitTest\\processDebugUnitTestJavaRes",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\java_res\\debugUnitTest\\processDebugUnitTestJavaRes\\out",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    "ideSetupTaskNames": [
+                        "createMockableJar"
+                    ],
+                    "generatedSourceFolders": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugUnitTest\\out",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugUnitTest\\out",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "out",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugUnitTest",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugUnitTest\\out",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "generatedClassPaths": {
+                        
+                    },
+                    "bytecodeTransformations": [
+                        
+                    ],
+                    "modelSyncFiles": [
+                        
+                    ]
+                }
+            },
+            "testFixturesArtifact": null,
+            "testSuiteArtifacts": {
+                
+            },
+            "testedTargetVariant": null,
+            "runTestInSeparateProcess": false,
+            "desugaredMethods": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                    "canonicalPath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                    "directory": false,
+                    "file": true,
+                    "freeSpace": 137897762816,
+                    "hidden": false,
+                    "name": "D8BackportedDesugaredMethods.txt",
+                    "parent": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed",
+                    "path": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                    "totalSpace": 865170616320,
+                    "usableSpace": 137897762816
+                }
+            ],
+            "experimentalProperties": {
+                
+            },
+            "androidTestArtifact": {
+                "minSdkVersion": {
+                    "apiLevel": 26,
+                    "codename": null
+                },
+                "targetSdkVersionOverride": null,
+                "maxSdkVersion": null,
+                "signingConfigName": "debug",
+                "applicationId": "mx.utng.smarthealthmonitor.shared.test",
+                "abiFilters": [
+                    "armeabi-v7a",
+                    "arm64-v8a",
+                    "x86",
+                    "x86_64"
+                ],
+                "testInfo": {
+                    "animationsDisabled": false,
+                    "execution": "HOST",
+                    "additionalRuntimeApks": [
+                        
+                    ],
+                    "instrumentedTestTaskName": "connectedDebugAndroidTest"
+                },
+                "bundleInfo": null,
+                "codeShrinker": null,
+                "compileTaskName": "compileDebugAndroidTestSources",
+                "assembleTaskName": "assembleDebugAndroidTest",
+                "sourceGenTaskName": "generateDebugAndroidTestSources",
+                "resGenTaskName": "generateDebugAndroidTestResources",
+                "ideSetupTaskNames": [
+                    "generateDebugAndroidTestSources"
+                ],
+                "generatedSourceFolders": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugAndroidTest\\out",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugAndroidTest\\out",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "out",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugAndroidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugAndroidTest\\out",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\androidTest\\debug",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\androidTest\\debug",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "debug",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\androidTest\\debug",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "generatedResourceFolders": [
+                    
+                ],
+                "classesFolders": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugAndroidTest\\compileDebugAndroidTestJavaWithJavac\\classes",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugAndroidTest\\compileDebugAndroidTestJavaWithJavac\\classes",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "classes",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugAndroidTest\\compileDebugAndroidTestJavaWithJavac",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugAndroidTest\\compileDebugAndroidTestJavaWithJavac\\classes",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debugAndroidTest\\generateDebugAndroidTestRFile\\R.jar",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debugAndroidTest\\generateDebugAndroidTestRFile\\R.jar",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "R.jar",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debugAndroidTest\\generateDebugAndroidTestRFile",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\debugAndroidTest\\generateDebugAndroidTestRFile\\R.jar",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugAndroidTest\\compileDebugAndroidTestKotlin\\classes",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugAndroidTest\\compileDebugAndroidTestKotlin\\classes",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "classes",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugAndroidTest\\compileDebugAndroidTestKotlin",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugAndroidTest\\compileDebugAndroidTestKotlin\\classes",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "assembleTaskOutputListingFile": {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\apk_ide_redirect_file\\debugAndroidTest\\createDebugAndroidTestApkListingFileRedirect\\redirect.txt",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\apk_ide_redirect_file\\debugAndroidTest\\createDebugAndroidTestApkListingFileRedirect\\redirect.txt",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "redirect.txt",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\apk_ide_redirect_file\\debugAndroidTest\\createDebugAndroidTestApkListingFileRedirect",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\apk_ide_redirect_file\\debugAndroidTest\\createDebugAndroidTestApkListingFileRedirect\\redirect.txt",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                },
+                "desugaredMethodsFiles": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                        "canonicalPath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                        "directory": false,
+                        "file": true,
+                        "freeSpace": 137897762816,
+                        "hidden": false,
+                        "name": "D8BackportedDesugaredMethods.txt",
+                        "parent": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed",
+                        "path": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                        "totalSpace": 865170616320,
+                        "usableSpace": 137897762816
+                    }
+                ],
+                "generatedClassPaths": {
+                    
+                },
+                "bytecodeTransformations": [
+                    
+                ],
+                "generatedAssetsFolders": [
+                    
+                ],
+                "mappingR8TextFile": null,
+                "mappingR8PartitionFile": null,
+                "modelSyncFiles": [
+                    
+                ],
+                "signed": true
+            },
+            "instantAppCompatible": false,
+            "unitTestArtifact": {
+                "mockablePlatformJar": {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\d16221ef5c08afbd068d3588f3490ebb\\transformed\\android.jar",
+                    "canonicalPath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\d16221ef5c08afbd068d3588f3490ebb\\transformed\\android.jar",
+                    "directory": false,
+                    "file": true,
+                    "freeSpace": 137897762816,
+                    "hidden": false,
+                    "name": "android.jar",
+                    "parent": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\d16221ef5c08afbd068d3588f3490ebb\\transformed",
+                    "path": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\d16221ef5c08afbd068d3588f3490ebb\\transformed\\android.jar",
+                    "totalSpace": 865170616320,
+                    "usableSpace": 137897762816
+                },
+                "compileTaskName": "compileDebugUnitTestSources",
+                "assembleTaskName": "assembleDebugUnitTest",
+                "classesFolders": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugUnitTest\\compileDebugUnitTestJavaWithJavac\\classes",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugUnitTest\\compileDebugUnitTestJavaWithJavac\\classes",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "classes",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugUnitTest\\compileDebugUnitTestJavaWithJavac",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\debugUnitTest\\compileDebugUnitTestJavaWithJavac\\classes",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugUnitTest\\compileDebugUnitTestKotlin\\classes",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugUnitTest\\compileDebugUnitTestKotlin\\classes",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "classes",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugUnitTest\\compileDebugUnitTestKotlin",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\debugUnitTest\\compileDebugUnitTestKotlin\\classes",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_and_runtime_r_class_jar\\debugUnitTest\\generateDebugUnitTestStubRFile\\R.jar",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_and_runtime_r_class_jar\\debugUnitTest\\generateDebugUnitTestStubRFile\\R.jar",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "R.jar",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_and_runtime_r_class_jar\\debugUnitTest\\generateDebugUnitTestStubRFile",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_and_runtime_r_class_jar\\debugUnitTest\\generateDebugUnitTestStubRFile\\R.jar",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "runtimeResourceFolder": {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\java_res\\debugUnitTest\\processDebugUnitTestJavaRes\\out",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\java_res\\debugUnitTest\\processDebugUnitTestJavaRes\\out",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "out",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\java_res\\debugUnitTest\\processDebugUnitTestJavaRes",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\java_res\\debugUnitTest\\processDebugUnitTestJavaRes\\out",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                },
+                "ideSetupTaskNames": [
+                    "createMockableJar"
+                ],
+                "generatedSourceFolders": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugUnitTest\\out",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugUnitTest\\out",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "out",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugUnitTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\debugUnitTest\\out",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "generatedClassPaths": {
+                    
+                },
+                "bytecodeTransformations": [
+                    
+                ],
+                "modelSyncFiles": [
+                    
+                ]
+            }
+        },
+        {
+            "name": "release",
+            "displayName": "release",
+            "mainArtifact": {
+                "minSdkVersion": {
+                    "apiLevel": 26,
+                    "codename": null
+                },
+                "targetSdkVersionOverride": null,
+                "maxSdkVersion": null,
+                "signingConfigName": null,
+                "applicationId": null,
+                "abiFilters": [
+                    "armeabi-v7a",
+                    "arm64-v8a",
+                    "x86",
+                    "x86_64"
+                ],
+                "testInfo": null,
+                "bundleInfo": null,
+                "codeShrinker": null,
+                "compileTaskName": "compileReleaseSources",
+                "assembleTaskName": "assembleRelease",
+                "sourceGenTaskName": "generateReleaseSources",
+                "resGenTaskName": "generateReleaseResources",
+                "ideSetupTaskNames": [
+                    "generateReleaseSources"
+                ],
+                "generatedSourceFolders": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\release\\out",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\release\\out",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "out",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\ap_generated_sources\\release\\out",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\release",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\release",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "release",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\generated\\source\\buildConfig\\release",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "generatedResourceFolders": [
+                    
+                ],
+                "classesFolders": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\release\\compileReleaseJavaWithJavac\\classes",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\release\\compileReleaseJavaWithJavac\\classes",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "classes",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\release\\compileReleaseJavaWithJavac",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\javac\\release\\compileReleaseJavaWithJavac\\classes",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\release\\generateReleaseRFile\\R.jar",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\release\\generateReleaseRFile\\R.jar",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "R.jar",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\release\\generateReleaseRFile",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\compile_r_class_jar\\release\\generateReleaseRFile\\R.jar",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\release\\compileReleaseKotlin\\classes",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\release\\compileReleaseKotlin\\classes",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "classes",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\release\\compileReleaseKotlin",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build\\intermediates\\built_in_kotlinc\\release\\compileReleaseKotlin\\classes",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "assembleTaskOutputListingFile": null,
+                "desugaredMethodsFiles": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                        "canonicalPath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                        "directory": false,
+                        "file": true,
+                        "freeSpace": 137897762816,
+                        "hidden": false,
+                        "name": "D8BackportedDesugaredMethods.txt",
+                        "parent": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed",
+                        "path": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                        "totalSpace": 865170616320,
+                        "usableSpace": 137897762816
+                    }
+                ],
+                "generatedClassPaths": {
+                    
+                },
+                "bytecodeTransformations": [
+                    
+                ],
+                "generatedAssetsFolders": [
+                    
+                ],
+                "mappingR8TextFile": null,
+                "mappingR8PartitionFile": null,
+                "modelSyncFiles": [
+                    
+                ],
+                "signed": false
+            },
+            "deviceTestArtifacts": {
+                
+            },
+            "hostTestArtifacts": {
+                
+            },
+            "testFixturesArtifact": null,
+            "testSuiteArtifacts": {
+                
+            },
+            "testedTargetVariant": null,
+            "runTestInSeparateProcess": false,
+            "desugaredMethods": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                    "canonicalPath": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                    "directory": false,
+                    "file": true,
+                    "freeSpace": 137897762816,
+                    "hidden": false,
+                    "name": "D8BackportedDesugaredMethods.txt",
+                    "parent": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed",
+                    "path": "C:\\Users\\Lenovo\\.gradle\\caches\\9.4.1\\transforms\\9829b0d8695dfcefe535aa053df47dda\\transformed\\D8BackportedDesugaredMethods.txt",
+                    "totalSpace": 865170616320,
+                    "usableSpace": 137897762816
+                }
+            ],
+            "experimentalProperties": {
+                
+            },
+            "androidTestArtifact": null,
+            "instantAppCompatible": false,
+            "unitTestArtifact": null
+        }
+    ],
+    "testSuites": [
+        
+    ],
+    "javaCompileOptions": {
+        "encoding": "UTF-8",
+        "sourceCompatibility": "17",
+        "targetCompatibility": "17",
+        "coreLibraryDesugaringEnabled": false
+    },
+    "resourcePrefix": null,
+    "dynamicFeatures": null,
+    "viewBindingOptions": {
+        "enabled": false
+    },
+    "flags": {
+        "booleanFlagMap": {
+            "APPLICATION_R_CLASS_CONSTANT_IDS": false,
+            "TEST_R_CLASS_CONSTANT_IDS": false,
+            "JETPACK_COMPOSE": false,
+            "ML_MODEL_BINDING": false,
+            "TRANSITIVE_R_CLASS": false,
+            "UNIFIED_TEST_PLATFORM": true,
+            "USE_ANDROID_X": true,
+            "BUILD_FEATURE_ANDROID_RESOURCES": true,
+            "EXCLUDE_LIBRARY_COMPONENTS_FROM_CONSTRAINTS": false,
+            "ENABLE_COMPILE_RUNTIME_CLASSPATH_ALIGNMENT": false,
+            "DATA_BINDING_ENABLED": false,
+            "GENERATE_MANIFEST_CLASS": false,
+            "OLD_VARIANT_API_IN_USE": false,
+            "R8_GRADUAL_API": false,
+            "BUILT_IN_KOTLIN_DEFAULT_ENABLED": true
+        }
+    },
+    "lintChecksJars": [
+        
+    ],
+    "desugarLibConfig": [
+        
+    ],
+    "lintJar": null
+}

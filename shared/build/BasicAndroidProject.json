@@ -1,0 +1,2130 @@
+{
+    "path": ":shared",
+    "projectType": "LIBRARY",
+    "mainSourceSet": {
+        "sourceProvider": {
+            "name": "main",
+            "manifestFile": {
+                "absolute": true,
+                "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\AndroidManifest.xml",
+                "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\AndroidManifest.xml",
+                "directory": false,
+                "file": true,
+                "freeSpace": 137897705472,
+                "hidden": false,
+                "name": "AndroidManifest.xml",
+                "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\AndroidManifest.xml",
+                "totalSpace": 865170616320,
+                "usableSpace": 137897705472
+            },
+            "javaDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\java",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\java",
+                    "directory": true,
+                    "file": false,
+                    "freeSpace": 137897705472,
+                    "hidden": false,
+                    "name": "java",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\java",
+                    "totalSpace": 865170616320,
+                    "usableSpace": 137897705472
+                }
+            ],
+            "kotlinDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\java",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\java",
+                    "directory": true,
+                    "file": false,
+                    "freeSpace": 137897705472,
+                    "hidden": false,
+                    "name": "java",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\java",
+                    "totalSpace": 865170616320,
+                    "usableSpace": 137897705472
+                },
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\kotlin",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\kotlin",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "kotlin",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\kotlin",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "resourcesDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\resources",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\resources",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "resources",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\resources",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "aidlDirectories": null,
+            "renderscriptDirectories": null,
+            "baselineProfileDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\baselineProfiles",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\baselineProfiles",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "baselineProfiles",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\baselineProfiles",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "keepRulesDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\keepRules",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\keepRules",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "keepRules",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\keepRules",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "aarKeepRulesDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\aarKeepRules",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\aarKeepRules",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "aarKeepRules",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\aarKeepRules",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "resDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\res",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\res",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "res",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\res",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "assetsDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\assets",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\assets",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "assets",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\assets",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "jniLibsDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\jniLibs",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\jniLibs",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "jniLibs",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\main\\jniLibs",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "shadersDirectories": null,
+            "mlModelsDirectories": null,
+            "customDirectories": [
+                
+            ]
+        },
+        "deviceTestSourceProviders": {
+            "_android_test_": {
+                "name": "androidTest",
+                "manifestFile": {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\AndroidManifest.xml",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\AndroidManifest.xml",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "AndroidManifest.xml",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\AndroidManifest.xml",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                },
+                "javaDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "kotlinDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\kotlin",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\kotlin",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "kotlin",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\kotlin",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resourcesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\resources",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\resources",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "resources",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\resources",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aidlDirectories": null,
+                "renderscriptDirectories": null,
+                "baselineProfileDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\baselineProfiles",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\baselineProfiles",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "baselineProfiles",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\baselineProfiles",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "keepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\keepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\keepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "keepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\keepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aarKeepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\aarKeepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\aarKeepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "aarKeepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\aarKeepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\res",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\res",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "res",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\res",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "assetsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\assets",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\assets",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "assets",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\assets",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "jniLibsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\jniLibs",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\jniLibs",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "jniLibs",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\jniLibs",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "shadersDirectories": null,
+                "mlModelsDirectories": null,
+                "customDirectories": [
+                    
+                ]
+            }
+        },
+        "hostTestSourceProviders": {
+            "_unit_test_": {
+                "name": "test",
+                "manifestFile": {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\AndroidManifest.xml",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\AndroidManifest.xml",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "AndroidManifest.xml",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\AndroidManifest.xml",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                },
+                "javaDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "kotlinDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\kotlin",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\kotlin",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "kotlin",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\kotlin",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resourcesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\resources",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\resources",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "resources",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\resources",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aidlDirectories": null,
+                "renderscriptDirectories": null,
+                "baselineProfileDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\baselineProfiles",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\baselineProfiles",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "baselineProfiles",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\baselineProfiles",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "keepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\keepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\keepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "keepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\keepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aarKeepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\aarKeepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\aarKeepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "aarKeepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\aarKeepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\res",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\res",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "res",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\res",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "assetsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\assets",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\assets",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "assets",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\assets",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "jniLibsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\jniLibs",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\jniLibs",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "jniLibs",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\jniLibs",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "shadersDirectories": null,
+                "mlModelsDirectories": null,
+                "customDirectories": [
+                    
+                ]
+            }
+        },
+        "testFixturesSourceProvider": null,
+        "androidTestSourceProvider": {
+            "name": "androidTest",
+            "manifestFile": {
+                "absolute": true,
+                "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\AndroidManifest.xml",
+                "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\AndroidManifest.xml",
+                "directory": false,
+                "file": false,
+                "freeSpace": 0,
+                "hidden": false,
+                "name": "AndroidManifest.xml",
+                "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\AndroidManifest.xml",
+                "totalSpace": 0,
+                "usableSpace": 0
+            },
+            "javaDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "java",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "kotlinDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "java",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\java",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                },
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\kotlin",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\kotlin",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "kotlin",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\kotlin",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "resourcesDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\resources",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\resources",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "resources",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\resources",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "aidlDirectories": null,
+            "renderscriptDirectories": null,
+            "baselineProfileDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\baselineProfiles",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\baselineProfiles",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "baselineProfiles",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\baselineProfiles",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "keepRulesDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\keepRules",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\keepRules",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "keepRules",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\keepRules",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "aarKeepRulesDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\aarKeepRules",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\aarKeepRules",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "aarKeepRules",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\aarKeepRules",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "resDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\res",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\res",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "res",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\res",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "assetsDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\assets",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\assets",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "assets",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\assets",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "jniLibsDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\jniLibs",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\jniLibs",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "jniLibs",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTest\\jniLibs",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "shadersDirectories": null,
+            "mlModelsDirectories": null,
+            "customDirectories": [
+                
+            ]
+        },
+        "unitTestSourceProvider": {
+            "name": "test",
+            "manifestFile": {
+                "absolute": true,
+                "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\AndroidManifest.xml",
+                "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\AndroidManifest.xml",
+                "directory": false,
+                "file": false,
+                "freeSpace": 0,
+                "hidden": false,
+                "name": "AndroidManifest.xml",
+                "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\AndroidManifest.xml",
+                "totalSpace": 0,
+                "usableSpace": 0
+            },
+            "javaDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "java",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "kotlinDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "java",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\java",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                },
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\kotlin",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\kotlin",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "kotlin",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\kotlin",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "resourcesDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\resources",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\resources",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "resources",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\resources",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "aidlDirectories": null,
+            "renderscriptDirectories": null,
+            "baselineProfileDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\baselineProfiles",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\baselineProfiles",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "baselineProfiles",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\baselineProfiles",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "keepRulesDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\keepRules",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\keepRules",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "keepRules",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\keepRules",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "aarKeepRulesDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\aarKeepRules",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\aarKeepRules",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "aarKeepRules",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\aarKeepRules",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "resDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\res",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\res",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "res",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\res",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "assetsDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\assets",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\assets",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "assets",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\assets",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "jniLibsDirectories": [
+                {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\jniLibs",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\jniLibs",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "jniLibs",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\test\\jniLibs",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                }
+            ],
+            "shadersDirectories": null,
+            "mlModelsDirectories": null,
+            "customDirectories": [
+                
+            ]
+        }
+    },
+    "buildTypeSourceSets": [
+        {
+            "sourceProvider": {
+                "name": "debug",
+                "manifestFile": {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\AndroidManifest.xml",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\AndroidManifest.xml",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "AndroidManifest.xml",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\AndroidManifest.xml",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                },
+                "javaDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "kotlinDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\kotlin",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\kotlin",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "kotlin",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\kotlin",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resourcesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\resources",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\resources",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "resources",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\resources",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aidlDirectories": null,
+                "renderscriptDirectories": null,
+                "baselineProfileDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\baselineProfiles",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\baselineProfiles",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "baselineProfiles",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\baselineProfiles",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "keepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\keepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\keepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "keepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\keepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aarKeepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\aarKeepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\aarKeepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "aarKeepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\aarKeepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\res",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\res",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "res",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\res",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "assetsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\assets",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\assets",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "assets",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\assets",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "jniLibsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\jniLibs",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\jniLibs",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "jniLibs",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\debug\\jniLibs",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "shadersDirectories": null,
+                "mlModelsDirectories": null,
+                "customDirectories": [
+                    
+                ]
+            },
+            "deviceTestSourceProviders": {
+                "_android_test_": {
+                    "name": "androidTestDebug",
+                    "manifestFile": {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\AndroidManifest.xml",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\AndroidManifest.xml",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "AndroidManifest.xml",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\AndroidManifest.xml",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    "javaDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "java",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "kotlinDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "java",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        },
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\kotlin",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\kotlin",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "kotlin",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\kotlin",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "resourcesDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\resources",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\resources",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "resources",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\resources",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "aidlDirectories": null,
+                    "renderscriptDirectories": null,
+                    "baselineProfileDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\baselineProfiles",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\baselineProfiles",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "baselineProfiles",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\baselineProfiles",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "keepRulesDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\keepRules",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\keepRules",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "keepRules",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\keepRules",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "aarKeepRulesDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\aarKeepRules",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\aarKeepRules",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "aarKeepRules",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\aarKeepRules",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "resDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\res",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\res",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "res",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\res",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "assetsDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\assets",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\assets",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "assets",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\assets",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "jniLibsDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\jniLibs",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\jniLibs",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "jniLibs",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\jniLibs",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "shadersDirectories": null,
+                    "mlModelsDirectories": null,
+                    "customDirectories": [
+                        
+                    ]
+                }
+            },
+            "hostTestSourceProviders": {
+                "_unit_test_": {
+                    "name": "testDebug",
+                    "manifestFile": {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\AndroidManifest.xml",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\AndroidManifest.xml",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "AndroidManifest.xml",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\AndroidManifest.xml",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    "javaDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "java",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "kotlinDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "java",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        },
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\kotlin",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\kotlin",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "kotlin",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\kotlin",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "resourcesDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\resources",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\resources",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "resources",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\resources",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "aidlDirectories": null,
+                    "renderscriptDirectories": null,
+                    "baselineProfileDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\baselineProfiles",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\baselineProfiles",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "baselineProfiles",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\baselineProfiles",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "keepRulesDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\keepRules",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\keepRules",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "keepRules",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\keepRules",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "aarKeepRulesDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\aarKeepRules",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\aarKeepRules",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "aarKeepRules",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\aarKeepRules",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "resDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\res",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\res",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "res",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\res",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "assetsDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\assets",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\assets",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "assets",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\assets",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "jniLibsDirectories": [
+                        {
+                            "absolute": true,
+                            "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\jniLibs",
+                            "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\jniLibs",
+                            "directory": false,
+                            "file": false,
+                            "freeSpace": 0,
+                            "hidden": false,
+                            "name": "jniLibs",
+                            "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                            "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\jniLibs",
+                            "totalSpace": 0,
+                            "usableSpace": 0
+                        }
+                    ],
+                    "shadersDirectories": null,
+                    "mlModelsDirectories": null,
+                    "customDirectories": [
+                        
+                    ]
+                }
+            },
+            "testFixturesSourceProvider": null,
+            "androidTestSourceProvider": {
+                "name": "androidTestDebug",
+                "manifestFile": {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\AndroidManifest.xml",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\AndroidManifest.xml",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "AndroidManifest.xml",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\AndroidManifest.xml",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                },
+                "javaDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "kotlinDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\kotlin",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\kotlin",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "kotlin",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\kotlin",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resourcesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\resources",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\resources",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "resources",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\resources",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aidlDirectories": null,
+                "renderscriptDirectories": null,
+                "baselineProfileDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\baselineProfiles",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\baselineProfiles",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "baselineProfiles",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\baselineProfiles",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "keepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\keepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\keepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "keepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\keepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aarKeepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\aarKeepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\aarKeepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "aarKeepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\aarKeepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\res",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\res",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "res",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\res",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "assetsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\assets",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\assets",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "assets",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\assets",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "jniLibsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\jniLibs",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\jniLibs",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "jniLibs",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\androidTestDebug\\jniLibs",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "shadersDirectories": null,
+                "mlModelsDirectories": null,
+                "customDirectories": [
+                    
+                ]
+            },
+            "unitTestSourceProvider": {
+                "name": "testDebug",
+                "manifestFile": {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\AndroidManifest.xml",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\AndroidManifest.xml",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "AndroidManifest.xml",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\AndroidManifest.xml",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                },
+                "javaDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "kotlinDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\kotlin",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\kotlin",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "kotlin",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\kotlin",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resourcesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\resources",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\resources",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "resources",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\resources",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aidlDirectories": null,
+                "renderscriptDirectories": null,
+                "baselineProfileDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\baselineProfiles",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\baselineProfiles",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "baselineProfiles",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\baselineProfiles",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "keepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\keepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\keepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "keepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\keepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aarKeepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\aarKeepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\aarKeepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "aarKeepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\aarKeepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\res",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\res",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "res",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\res",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "assetsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\assets",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\assets",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "assets",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\assets",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "jniLibsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\jniLibs",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\jniLibs",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "jniLibs",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\testDebug\\jniLibs",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "shadersDirectories": null,
+                "mlModelsDirectories": null,
+                "customDirectories": [
+                    
+                ]
+            }
+        },
+        {
+            "sourceProvider": {
+                "name": "release",
+                "manifestFile": {
+                    "absolute": true,
+                    "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\AndroidManifest.xml",
+                    "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\AndroidManifest.xml",
+                    "directory": false,
+                    "file": false,
+                    "freeSpace": 0,
+                    "hidden": false,
+                    "name": "AndroidManifest.xml",
+                    "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                    "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\AndroidManifest.xml",
+                    "totalSpace": 0,
+                    "usableSpace": 0
+                },
+                "javaDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "kotlinDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\java",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\java",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "java",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\java",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    },
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\kotlin",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\kotlin",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "kotlin",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\kotlin",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resourcesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\resources",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\resources",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "resources",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\resources",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aidlDirectories": null,
+                "renderscriptDirectories": null,
+                "baselineProfileDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\baselineProfiles",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\baselineProfiles",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "baselineProfiles",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\baselineProfiles",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "keepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\keepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\keepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "keepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\keepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "aarKeepRulesDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\aarKeepRules",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\aarKeepRules",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "aarKeepRules",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\aarKeepRules",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "resDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\res",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\res",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "res",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\res",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "assetsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\assets",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\assets",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "assets",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\assets",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "jniLibsDirectories": [
+                    {
+                        "absolute": true,
+                        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\jniLibs",
+                        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\jniLibs",
+                        "directory": false,
+                        "file": false,
+                        "freeSpace": 0,
+                        "hidden": false,
+                        "name": "jniLibs",
+                        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release",
+                        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\src\\release\\jniLibs",
+                        "totalSpace": 0,
+                        "usableSpace": 0
+                    }
+                ],
+                "shadersDirectories": null,
+                "mlModelsDirectories": null,
+                "customDirectories": [
+                    
+                ]
+            },
+            "deviceTestSourceProviders": {
+                
+            },
+            "hostTestSourceProviders": {
+                
+            },
+            "testFixturesSourceProvider": null,
+            "androidTestSourceProvider": null,
+            "unitTestSourceProvider": null
+        }
+    ],
+    "productFlavorSourceSets": [
+        
+    ],
+    "testSuites": [
+        
+    ],
+    "variants": [
+        {
+            "name": "debug",
+            "mainArtifact": {
+                "variantSourceProvider": null,
+                "multiFlavorSourceProvider": null
+            },
+            "deviceTestArtifacts": {
+                "_android_test_": {
+                    "variantSourceProvider": null,
+                    "multiFlavorSourceProvider": null
+                }
+            },
+            "hostTestArtifacts": {
+                "_unit_test_": {
+                    "variantSourceProvider": null,
+                    "multiFlavorSourceProvider": null
+                }
+            },
+            "testSuiteArtifacts": {
+                
+            },
+            "testFixturesArtifact": null,
+            "buildType": "debug",
+            "productFlavors": [
+                
+            ],
+            "androidTestArtifact": {
+                "variantSourceProvider": null,
+                "multiFlavorSourceProvider": null
+            },
+            "unitTestArtifact": {
+                "variantSourceProvider": null,
+                "multiFlavorSourceProvider": null
+            }
+        },
+        {
+            "name": "release",
+            "mainArtifact": {
+                "variantSourceProvider": null,
+                "multiFlavorSourceProvider": null
+            },
+            "deviceTestArtifacts": {
+                
+            },
+            "hostTestArtifacts": {
+                
+            },
+            "testSuiteArtifacts": {
+                
+            },
+            "testFixturesArtifact": null,
+            "buildType": "release",
+            "productFlavors": [
+                
+            ],
+            "androidTestArtifact": null,
+            "unitTestArtifact": null
+        }
+    ],
+    "bootClasspath": [
+        {
+            "absolute": true,
+            "absolutePath": "C:\\Users\\Lenovo\\AppData\\Local\\Android\\Sdk\\platforms\\android-37.0\\android.jar",
+            "canonicalPath": "C:\\Users\\Lenovo\\AppData\\Local\\Android\\Sdk\\platforms\\android-37.0\\android.jar",
+            "directory": false,
+            "file": true,
+            "freeSpace": 137897705472,
+            "hidden": false,
+            "name": "android.jar",
+            "parent": "C:\\Users\\Lenovo\\AppData\\Local\\Android\\Sdk\\platforms\\android-37.0",
+            "path": "C:\\Users\\Lenovo\\AppData\\Local\\Android\\Sdk\\platforms\\android-37.0\\android.jar",
+            "totalSpace": 865170616320,
+            "usableSpace": 137897705472
+        }
+    ],
+    "buildFolder": {
+        "absolute": true,
+        "absolutePath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build",
+        "canonicalPath": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build",
+        "directory": true,
+        "file": false,
+        "freeSpace": 137897705472,
+        "hidden": false,
+        "name": "build",
+        "parent": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared",
+        "path": "C:\\Users\\Lenovo\\AndroidStudioProjects\\SartHealthMonitor\\shared\\build",
+        "totalSpace": 865170616320,
+        "usableSpace": 137897705472
+    },
+    "buildName": "n/a"
+}

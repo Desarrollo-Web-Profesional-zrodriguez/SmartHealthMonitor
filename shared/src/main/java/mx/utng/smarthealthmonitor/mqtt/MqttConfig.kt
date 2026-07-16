@@ -7,6 +7,9 @@ import mx.utng.smarthealthmonitor.shared.BuildConfig
  * Se utiliza BuildConfig para mantener las credenciales seguras (desde local.properties).
  */
 object MqttConfig {
+    init {
+        android.util.Log.d("MQTT_CONFIG", "INIT: BROKER_URL=${BuildConfig.MQTT_BROKER_URL}, PORT=${BuildConfig.MQTT_PORT}")
+    }
     // Datos dinámicos desde local.properties
     val BROKER_URL: String = "ssl://${BuildConfig.MQTT_BROKER_URL}:${BuildConfig.MQTT_PORT}"
     val USERNAME: String = BuildConfig.MQTT_USER

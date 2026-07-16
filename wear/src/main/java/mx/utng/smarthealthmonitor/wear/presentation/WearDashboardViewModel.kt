@@ -17,18 +17,30 @@ class WearDashboardViewModel(application: Application) : AndroidViewModel(applic
     private val mqttPublisher = MqttWearPublisher(application)
 
     init {
-        mqttPublisher.connect()
+        viewModelScope.launch(kotlinx.coroutines.Dispatchers.IO) {
+            mqttPublisher.connect()
+            // Esperar conexión y forzar envío inicial
+            kotlinx.coroutines.delay(5000)
+            publicarValorActual()
+        }
         viewModelScope.launch {
             SmartHealthRepository.fcFlow.collect { bpm ->
                 if (bpm > 0) {
-                    val estado = when {
-                        bpm < 60 -> "FC Baja"
-                        bpm > 100 -> "FC Alta"
-                        else -> "Normal"
-                    }
-                    mqttPublisher.publishFC(bpm, estado)
+                    publicarValorActual(bpm)
                 }
             }
+        }
+    }
+
+    private fun publicarValorActual(bpmActual: Int? = null) {
+        val valor = bpmActual ?: SmartHealthRepository.fcFlow.value
+        if (valor > 0) {
+            val estado = when {
+                valor < 60 -> "FC Baja"
+                valor > 100 -> "FC Alta"
+                else -> "Normal"
+            }
+            mqttPublisher.publishFC(valor, estado)
         }
     }
 

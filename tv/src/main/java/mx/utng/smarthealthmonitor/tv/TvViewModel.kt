@@ -40,7 +40,11 @@ class TvViewModel(application: Application) : AndroidViewModel(application) {
     private val mqttSubscriber = MqttTvSubscriber(application, mqttFlow)
 
     init {
-        mqttSubscriber.connect()
+        viewModelScope.launch(kotlinx.coroutines.Dispatchers.IO) {
+            // Pequeña espera para asegurar que la red del emulador esté lista
+            kotlinx.coroutines.delay(2000)
+            mqttSubscriber.connect()
+        }
 
         // Observar mensajes MQTT y actualizar el estado de la UI
         viewModelScope.launch {
@@ -49,6 +53,7 @@ class TvViewModel(application: Application) : AndroidViewModel(application) {
                 
                 // Actualizar repositorio local para persistir lectura
                 SmartHealthRepository.actualizarFC(tvMsg.bpm)
+                SmartHealthRepository.actualizarPasos(tvMsg.pasos)
 
                 _state.update { it.copy(
                     fcActual = tvMsg.bpm,

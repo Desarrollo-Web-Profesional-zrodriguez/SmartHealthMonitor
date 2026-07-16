@@ -19,15 +19,25 @@ class SmartHealthApp : Application() {
             context = this,
             onFcReceived = { bpm, _ ->
                 MainScope().launch {
-                    SmartHealthRepository.actualizarFC(bpm)
+                    SmartHealthRepository.actualizarFC(bpm, guardarEnBD = true)
                 }
             }
         )
-        mqttService.connect()
+        
+        MainScope().launch(kotlinx.coroutines.Dispatchers.IO) {
+            mqttService.connect()
+        }
 
         // Limpiar historial antiguo al iniciar (más de 7 días)
         MainScope().launch {
             SmartHealthRepository.limpiarHistorialAntiguo()
+            
+            // Observar cambios locales (desde Data Layer) para reenviar a la TV vía MQTT
+            SmartHealthRepository.fcFlow.collect { bpm ->
+                if (bpm > 0) {
+                    mqttService.republicarATv(bpm)
+                }
+            }
         }
     }
 }

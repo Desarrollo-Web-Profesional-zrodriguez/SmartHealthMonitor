@@ -12,6 +12,7 @@ data class FcMessage(
 @Serializable
 data class TvMessage(
     val bpm    : Int,
+    val pasos  : Int = 0,
     val estado : String,
     val hora   : String
 )

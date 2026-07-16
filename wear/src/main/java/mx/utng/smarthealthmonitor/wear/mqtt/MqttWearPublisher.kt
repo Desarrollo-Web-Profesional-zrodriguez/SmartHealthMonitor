@@ -34,7 +34,8 @@ class MqttWearPublisher(private val context: Context) {
                 android.util.Log.d("MQTT_WEAR", "✅ Conectado a HiveMQ Cloud")
             }
             override fun onFailure(token: IMqttToken?, ex: Throwable?) {
-                android.util.Log.e("MQTT_WEAR", "❌ Error: ${ex?.message}")
+                android.util.Log.e("MQTT_WEAR", "❌ Error al conectar: ${ex?.message}")
+                ex?.printStackTrace()
             }
         })
     }

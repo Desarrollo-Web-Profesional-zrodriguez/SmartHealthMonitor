@@ -1,7 +1,18 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
+}
+
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(localPropertiesFile.inputStream())
+    println("DEBUG: MQTT_BROKER_URL loaded as ${localProperties.getProperty("mqtt.broker.url")}")
+} else {
+    println("DEBUG: local.properties NOT FOUND in shared module")
 }
 
 android {
@@ -10,10 +21,10 @@ android {
 
     defaultConfig {
         minSdk = 26
-        buildConfigField("String", "MQTT_BROKER_URL", "\"${project.findProperty("mqtt.broker.url") ?: ""}\"")
-        buildConfigField("String", "MQTT_PORT", "\"${project.findProperty("mqtt.port") ?: "8883"}\"")
-        buildConfigField("String", "MQTT_USER", "\"${project.findProperty("mqtt.user") ?: ""}\"")
-        buildConfigField("String", "MQTT_PASSWORD", "\"${project.findProperty("mqtt.password") ?: ""}\"")
+        buildConfigField("String", "MQTT_BROKER_URL", "\"${localProperties.getProperty("mqtt.broker.url") ?: ""}\"")
+        buildConfigField("String", "MQTT_PORT", "\"${localProperties.getProperty("mqtt.port") ?: "8883"}\"")
+        buildConfigField("String", "MQTT_USER", "\"${localProperties.getProperty("mqtt.user") ?: ""}\"")
+        buildConfigField("String", "MQTT_PASSWORD", "\"${localProperties.getProperty("mqtt.password") ?: ""}\"")
     }
 
     buildFeatures {

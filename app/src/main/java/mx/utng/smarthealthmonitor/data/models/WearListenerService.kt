@@ -40,6 +40,15 @@ class WearListenerService : WearableListenerService() {
                 scope.launch {
                     if (bpm > 0) SmartHealthRepository.actualizarFC(bpm)
                     if (pasos > 0) SmartHealthRepository.actualizarPasos(pasos)
+                    
+                    // Reenviar ambos datos a la TV vía MQTT (Bridge Maestro)
+                    val currentBpm = if (bpm > 0) bpm else SmartHealthRepository.fcFlow.value
+                    val currentPasos = if (pasos > 0) pasos else SmartHealthRepository.pasosFlow.value
+                    
+                    (application as? mx.utng.smarthealthmonitor.SmartHealthApp)?.mqttService?.republicarATv(
+                        bpm = currentBpm,
+                        pasos = currentPasos
+                    )
                 }
             }
         }

@@ -63,6 +63,8 @@ object SmartHealthRepository {
     }
 
     suspend fun actualizarFC(bpm: Int, guardarEnBD: Boolean = true) {
+        if (bpm == _fcFlow.value) return // Evitar publicaciones redundantes si el valor no cambia
+
         android.util.Log.d(TAG, "actualizarFC: $bpm")
         _fcFlow.value = bpm
         if (guardarEnBD) {

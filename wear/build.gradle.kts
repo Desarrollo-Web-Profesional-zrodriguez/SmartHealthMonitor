@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
 }
 
@@ -60,6 +61,12 @@ dependencies {
     implementation(libs.horologist.compose.material)
     // Compartir Repository y Data con el módulo shared (KMM)
     implementation(project(":shared"))
+
+    // Eclipse Paho MQTT para Android
+    implementation(libs.paho.mqtt)
+    implementation(libs.paho.android.service)
+    // Kotlinx Serialization para JSON
+    implementation(libs.kotlinx.serialization.json)
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)

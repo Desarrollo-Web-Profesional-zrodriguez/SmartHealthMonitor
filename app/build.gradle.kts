@@ -1,7 +1,16 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
+}
+
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(localPropertiesFile.inputStream())
 }
 
 android {
@@ -17,6 +26,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // MQTT Config from local.properties
+        buildConfigField("String", "MQTT_BROKER_URL", "\"${localProperties.getProperty("mqtt.broker.url") ?: ""}\"")
+        buildConfigField("String", "MQTT_PORT", "\"${localProperties.getProperty("mqtt.port") ?: "8883"}\"")
+        buildConfigField("String", "MQTT_USER", "\"${localProperties.getProperty("mqtt.user") ?: ""}\"")
+        buildConfigField("String", "MQTT_PASSWORD", "\"${localProperties.getProperty("mqtt.password") ?: ""}\"")
     }
 
     buildTypes {
@@ -64,6 +79,16 @@ dependencies {
     // Coroutines await() para Guava ListenableFuture
     implementation(libs.guava.v3300android)
     implementation(libs.kotlinx.coroutines.guava.v173)
+
+    // MediaRouter and Cast
+    implementation(libs.androidx.mediarouter)
+    implementation(libs.play.services.cast.framework)
+
+    // Eclipse Paho MQTT para Android
+    implementation(libs.paho.mqtt)
+    implementation(libs.paho.android.service)
+    // Kotlinx Serialization para JSON
+    implementation(libs.kotlinx.serialization.json)
 
     // Room
     val roomVersion = "2.7.0-alpha11"
